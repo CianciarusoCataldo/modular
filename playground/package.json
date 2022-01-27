@@ -1,0 +1,72 @@
+{
+  "name": "modular-app",
+  "description": "An optimized and ready to use React app, a standard template for every projects. Build your app from here !",
+  "version": "3.3.0",
+  "private": true,
+  "homepage": "https://cianciarusocataldo.github.io/modular-app",
+  "dependencies": {
+    "@cianciarusocataldo/modular-engine": "^1.5.0",
+    "@cianciarusocataldo/modular-ui": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.8",
+    "@types/jest": "^27.4.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.17",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^10.4.1",
+    "chokidar-cli": "^3.0.0",
+    "classnames": "^2.3.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.14",
+    "gh-pages": "^3.2.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "react-docgen-typescript": "^2.0.0",
+    "react-scripts": "^5.0.0",
+    "source-map-explorer": "^2.5.2",
+    "tailwindcss": "^3.0.8",
+    "typescript": "^4.5.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "preanalyze": "npm run build:dev",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "prebuild:dev": "cross-env NODE_ENV=development npm run build:styles",
+    "build:dev": "cross-env NODE_ENV=development GENERATE_SOURCEMAP=true react-scripts build",
+    "build:styles": "postcss --config config/postcss.config.js src/assets/styles/styles.css -o src/assets/styles/styles.output.css  --verbose",
+    "watch:styles": "chokidar 'src/**/*.css' --ignore src/assets/styles/styles.output.css -c 'npm run build:styles'",
+    "prebuild": "cross-env NODE_ENV=production npm run build:styles",
+    "build": "cross-env NODE_ENV=production GENERATE_SOURCEMAP=false react-scripts build",
+    "prestart": "cross-env NODE_ENV=development npm run build:styles",
+    "start:app": "cross-env NODE_ENV=development GENERATE_SOURCEMAP=false react-scripts start",
+    "start": "npm-run-all --parallel watch:styles start:app",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "check-types": "tsc"
+  }
+}
