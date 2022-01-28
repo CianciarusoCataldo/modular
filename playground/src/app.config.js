@@ -10,10 +10,6 @@ const appConfig = {
   modals: {},
   darkMode: true,
   preloader: () => <div className="preloader" />,
-  onFinish: () => {
-    let Preloader = document.getElementById("preloader");
-    if (Preloader) Preloader.style.visibility = "hidden";
-  },
   header: HeaderContent,
   footer: FooterContent,
   drawer: {

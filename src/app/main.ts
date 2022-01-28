@@ -15,10 +15,14 @@ const defaultTheme = {
   },
 };
 
-var theme = defaultTheme;
-var engineConfig = {
+const defaultEngineConfig = {
   redux: { ui: true, modal: true, epics: [], reducers: {}, preload: {} },
 };
+
+const defaultAppConfig = { darkMode: false };
+
+var theme = defaultTheme;
+var engineConfig = defaultEngineConfig;
 
 try {
   theme = require("theme.config.json");
@@ -32,20 +36,12 @@ try {
   engineConfig = require("engine.config").default;
 } catch {
   process.env.NODE_ENV === "development" &&
-    console.log("engine.config file not found, using default values");
-  engineConfig = {
-    redux: {
-      ui: true,
-      modal: true,
-      epics: [],
-      reducers: {},
-      preload: {},
-    },
-  };
+    console.log("engine.config file not found, using default engine config");
+  engineConfig = defaultEngineConfig;
 }
 
 export const initApplication = (callback: (App: JSX.Element) => any) => {
-  let config = { darkMode: false, onFinish: () => {} };
+  let config = defaultAppConfig;
 
   if (theme.body) {
     let css = "";
@@ -75,18 +71,22 @@ export const initApplication = (callback: (App: JSX.Element) => any) => {
     ({ initStore, setDarkMode }) => {
       const { store, history } = initStore({
         CONFIG: engineConfig,
-        epics: engineConfig.redux ? engineConfig.redux.epics || [] : [],
-        reducers: engineConfig.redux ? engineConfig.redux.reducers || {} : {},
+        epics: engineConfig.redux
+          ? engineConfig.redux.epics || []
+          : defaultEngineConfig.redux.epics,
+        reducers: engineConfig.redux
+          ? engineConfig.redux.reducers || {}
+          : defaultEngineConfig.redux.reducers,
         initialState: engineConfig.redux
           ? engineConfig.redux.preload || {}
-          : {},
+          : defaultEngineConfig.redux.preload,
       });
 
       import("./components/MainApp").then(({ default: MainApp }) => {
         try {
           config = require("app.config").default;
         } catch {
-          config = { darkMode: false, onFinish: () => {} };
+          config = defaultAppConfig;
         }
 
         engineConfig.redux.ui &&

@@ -25,7 +25,7 @@ const AppModal = ({
   const type = useSelector(getModalType);
   const isVisible = useSelector(isModalVisible);
   const i18n = useSelector(geti18nConfig);
-  const ModalContent = type && modals[type] ? modals[type] : <div />;
+  const ModalContent = type && modals[type] ? modals[type] : () => <div />;
 
   const { t } = useTranslation(i18n.modalsNamespace);
 
@@ -37,7 +37,7 @@ const AppModal = ({
       title={type ? t(type) : ""}
       hide={!isVisible}
     >
-      {ModalContent}
+      <ModalContent />
     </ModalComponent>
   );
 };

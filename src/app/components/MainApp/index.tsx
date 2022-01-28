@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import { History } from "history";
 import { Store } from "@reduxjs/toolkit";
 
-import { setDarkMode } from "@cianciarusocataldo/modular-engine";
+import { Config } from "@cianciarusocataldo/modular-engine";
 
 const MainApp = ({
   store,
@@ -19,20 +19,16 @@ const MainApp = ({
 }: {
   store: Store;
   history: History;
-  engine: Record<any, any> & { ui?: boolean; modal?: boolean };
+  engine: Config["redux"];
   config: AppConfig;
   theme: Theme;
 }) => {
-  engine.ui &&
-    config.darkMode !== undefined &&
-    store.dispatch(setDarkMode(config.darkMode));
-
   const CustomContent = config.content;
   const HeaderContent = config.header;
   const FooterContent = config.footer;
   const DrawerContent = config.drawer?.content;
   const DrawerLogo = config.drawer?.logo;
-  const Preloader = config.preloader;
+  const Preloader = config.preloader || (() => <div />);
   const AppContainer = React.lazy(() => import("../AppContainer"));
   const AppDrawer = React.lazy(() => import("../AppDrawer"));
   const AppModal = React.lazy(() => import("../AppModal"));
