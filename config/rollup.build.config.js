@@ -14,26 +14,22 @@ export default [
         format: "cjs",
         plugins: [terser()],
         strict: false,
-        banner: "/* eslint-disable */",
       },
       {
         dir: "playground/src/modular-preview",
         format: "esm",
         strict: false,
-        banner: "/* eslint-disable */",
       },
       {
         dir: pkg.module,
         format: "cjs",
         strict: false,
         plugins: [terser()],
-        banner: "/* eslint-disable */",
       },
       {
         dir: pkg.module,
         format: "esm",
         strict: false,
-        banner: "/* eslint-disable */",
       },
     ],
     plugins: [

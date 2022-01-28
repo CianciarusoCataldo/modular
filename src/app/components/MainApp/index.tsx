@@ -1,67 +1,47 @@
 import "react-toastify/dist/ReactToastify.css";
 
-import { Theme } from "./types";
+import React from "react";
 
-import { render } from "react-dom";
-import React, { Suspense } from "react";
+import { AppConfig, Theme } from "../../types";
 
-import { DrawerElement } from "@cianciarusocataldo/modular-ui";
-
-import { RouteProps } from "react-router-dom";
 import { Provider } from "react-redux";
 import { History } from "history";
 import { Store } from "@reduxjs/toolkit";
 
-import { ToastContainer } from "react-toastify";
 import { setDarkMode } from "@cianciarusocataldo/modular-engine";
-import {
-  AppContainer,
-  AppDrawer,
-  AppModal,
-  AppRouter,
-  DarkModeSwitcher,
-  LanguageSelector,
-} from "../predefined/components";
 
-/** Render Modular-app */
-const initApp = ({
+const MainApp = ({
   store,
   history,
-  config,
   engine,
+  config,
   theme,
 }: {
   store: Store;
   history: History;
   engine: Record<any, any> & { ui?: boolean; modal?: boolean };
-  config: {
-    pagesRendering?: (route: string) => RouteProps["component"];
-    darkMode?: boolean;
-    drawer?: {
-      content: () => JSX.Element;
-      logo: () => JSX.Element;
-      elements: DrawerElement[];
-    };
-    modals?: Record<string, () => JSX.Element>;
-    header?: () => JSX.Element;
-    footer?: () => JSX.Element;
-    content?: () => JSX.Element;
-  };
+  config: AppConfig;
   theme: Theme;
 }) => {
   engine.ui &&
     config.darkMode !== undefined &&
     store.dispatch(setDarkMode(config.darkMode));
 
-  const CustomContent = config.content || (() => <div />);
-  const HeaderContent = config.header || (() => <div />);
-  const FooterContent = config.footer || (() => <div />);
+  const CustomContent = config.content;
+  const HeaderContent = config.header;
+  const FooterContent = config.footer;
   const DrawerContent = config.drawer?.content;
   const DrawerLogo = config.drawer?.logo;
+  const Preloader = config.preloader;
+  const AppContainer = React.lazy(() => import("../AppContainer"));
+  const AppDrawer = React.lazy(() => import("../AppDrawer"));
+  const AppModal = React.lazy(() => import("../AppModal"));
+  const AppRouter = React.lazy(() => import("../AppRouter"));
+  const ToastContainer = React.lazy(() => import("../ToastContainer"));
 
-  render(
-    <Suspense fallback={<div className="preloader"></div>}>
-      <ToastContainer />
+  return (
+    <React.Suspense fallback={<Preloader />}>
+      {engine.ui && <ToastContainer />}
       <Provider store={store}>
         {engine.modal && <AppModal modals={config.modals || {}} />}
         {engine.ui && config.drawer && (
@@ -82,7 +62,7 @@ const initApp = ({
             alignItems: "center",
           }}
         >
-          {config.header && (
+          {HeaderContent && (
             <AppContainer
               wrapper="header"
               className={theme.header.className}
@@ -92,18 +72,6 @@ const initApp = ({
                 height: theme.header.height,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                }}
-              >
-                <div style={{ display: "flex", flexDirection: "row" }}>
-                  <LanguageSelector />
-                  {engine.ui && <DarkModeSwitcher />}
-                </div>
-              </div>
               <HeaderContent />
             </AppContainer>
           )}
@@ -119,8 +87,8 @@ const initApp = ({
               }}
             />
           )}
-          <CustomContent />
-          {config.footer && (
+          {CustomContent && <CustomContent />}
+          {FooterContent && (
             <AppContainer
               wrapper="footer"
               className={theme.router.className}
@@ -137,12 +105,8 @@ const initApp = ({
           )}
         </div>
       </Provider>
-    </Suspense>,
-    document.getElementById("root")
+    </React.Suspense>
   );
-
-  let Preloader = document.getElementById("preloader");
-  if (Preloader) Preloader.style.visibility = "hidden";
 };
 
-export default initApp;
+export default MainApp;

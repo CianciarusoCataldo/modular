@@ -1,1 +1,1 @@
-export { initApplication } from "./api/main";
+export { initApplication } from "./app/main";
