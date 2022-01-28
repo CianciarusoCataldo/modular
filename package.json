@@ -1,7 +1,7 @@
 {
   "name": "@cianciarusocataldo/modular",
   "description": "Setup and configure your web app with few steps",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "module": "dist",
   "typings": "dist/index.d.ts",
@@ -9,6 +9,12 @@
     "dist",
     "config/rollup.build.config.js"
   ],
+  "author": "Cataldo Cianciaruso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CianciarusoCataldo/modular/issues"
+  },
+  "homepage": "https://github.com/CianciarusoCataldo/modular#readme",
   "peerDependencies": {
     "@cianciarusocataldo/modular-engine": "^1.5.0",
     "@cianciarusocataldo/modular-ui": "^4.0.0",
