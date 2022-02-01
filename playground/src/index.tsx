@@ -1,4 +1,3 @@
-import "assets/styles/main.css";
 import "assets/styles/styles.output.css";
 
 if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {

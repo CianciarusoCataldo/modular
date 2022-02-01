@@ -8,12 +8,11 @@ import { getHomePage, getPages } from "@cianciarusocataldo/modular-engine";
 
 import { Redirect, Route, RouteProps, Router, Switch } from "react-router-dom";
 
-import AppContainer from "../AppContainer";
-
 const AppRouter = ({
   history,
   renderCallback,
   style,
+  className,
 }: {
   history: History;
   renderCallback: (route: string) => RouteProps["component"];
@@ -28,7 +27,7 @@ const AppRouter = ({
   };
 
   return (
-    <div style={style}>
+    <div style={style} className={className}>
       <Router history={history}>
         <Switch>
           {Object.keys(ALL_PAGES).map((route) => {

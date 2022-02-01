@@ -1,21 +1,21 @@
 {
   "name": "modular-app",
-  "description": "An optimized and ready to use React app, a standard template for every projects. Build your app from here !",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "private": true,
   "homepage": "https://cianciarusocataldo.github.io/modular-app",
   "dependencies": {
-    "@cianciarusocataldo/modular-engine": "^1.5.0",
-    "@cianciarusocataldo/modular-ui": "^4.0.0",
+    "@cianciarusocataldo/modular": "^0.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/history": "^4.7.8",
     "@types/jest": "^27.4.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.17",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@types/react-router-dom": "^5.1.7",
     "autoprefixer": "^10.4.1",
     "chokidar-cli": "^3.0.0",
     "classnames": "^2.3.1",

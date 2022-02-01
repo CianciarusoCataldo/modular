@@ -15,9 +15,9 @@ const engineConfig = {
   i18n: {
     fallbackLanguage: "en",
     supportedLanguages: ["en", "it", "es", "fr", "de"],
-    namespaces: ["home"],
-    defaultNamespace: "home",
     loadPath: "/modular-app/locales/{{lng}}/{{ns}}.json",
+    pagesNamespace: "page-titles",
+    modalsNamespace: "modal-titles",
   },
 };
 

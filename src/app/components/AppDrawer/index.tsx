@@ -9,7 +9,6 @@ import {
 
 import { Drawer, DrawerElement } from "@cianciarusocataldo/modular-ui";
 
-/** Custom Modular-app drawer */
 const AppDrawer = ({
   logo,
   children,

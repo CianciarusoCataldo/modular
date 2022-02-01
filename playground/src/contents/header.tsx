@@ -38,15 +38,9 @@ const HeaderContent = () => {
   const LANGUAGES = Object.keys(LANGUAGES_ICONS);
 
   return (
-    <div className="flex flex-col">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-        }}
-      >
-        <div style={{ display: "flex", flexDirection: "row" }}>
+    <div className="flex flex-col test-class">
+      <div className="flex flex-col items-end">
+        <div className="flex flex-row">
           <Dropdown
             dark={false}
             value={LANGUAGES.findIndex((lang) => lang === language)}

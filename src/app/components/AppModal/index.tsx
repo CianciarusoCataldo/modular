@@ -12,7 +12,6 @@ import {
 
 import { Modal } from "@cianciarusocataldo/modular-ui";
 
-/** Custom Modular-app modal */
 const AppModal = ({
   modals,
 }: {

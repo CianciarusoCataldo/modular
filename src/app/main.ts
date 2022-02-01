@@ -8,11 +8,6 @@ const defaultTheme = {
   router: {
     height: "70%",
   },
-  body: {
-    darkColor: "",
-    lightColor: "",
-    initialColor: "",
-  },
 };
 
 const defaultEngineConfig = {
@@ -22,7 +17,6 @@ const defaultEngineConfig = {
 const defaultAppConfig = { darkMode: false };
 
 var theme = defaultTheme;
-var engineConfig = defaultEngineConfig;
 
 try {
   theme = require("theme.config.json");
@@ -32,43 +26,24 @@ try {
   theme = defaultTheme;
 }
 
-try {
-  engineConfig = require("engine.config").default;
-} catch {
-  process.env.NODE_ENV === "development" &&
-    console.log("engine.config file not found, using default engine config");
-  engineConfig = defaultEngineConfig;
-}
-
 export const initApplication = (callback: (App: JSX.Element) => any) => {
   let config = defaultAppConfig;
-
-  if (theme.body) {
-    let css = "";
-    if (theme.body.initialColor) {
-      css = css + ` body { background-color : ${theme.body.initialColor} }`;
-    }
-    if (theme.body.darkColor) {
-      css = css + ` body.dark { background-image: ${theme.body.darkColor}; }`;
-    }
-    if (theme.body.lightColor) {
-      css = css + ` body.light { background-image: ${theme.body.lightColor}; }`;
-    }
-
-    if (theme.body.darkColor || theme.body.darkColor || theme.body.lightColor) {
-      let head = document.head || document.getElementsByTagName("head")[0];
-      let style = document.createElement("style");
-      style.appendChild(document.createTextNode(css));
-      head.appendChild(style);
-    }
-  }
-
-  import("@cianciarusocataldo/modular-engine").then(({ initi18n }) => {
-    initi18n(engineConfig);
-  });
+  let engineConfig = defaultEngineConfig;
 
   import("@cianciarusocataldo/modular-engine").then(
-    ({ initStore, setDarkMode }) => {
+    ({ initStore, initi18n, setDarkMode }) => {
+      try {
+        engineConfig = require("engine.config").default;
+      } catch {
+        process.env.NODE_ENV === "development" &&
+          console.log(
+            "engine.config file not found, using default engine config"
+          );
+        engineConfig = defaultEngineConfig;
+      }
+
+      initi18n(engineConfig);
+
       const { store, history } = initStore({
         CONFIG: engineConfig,
         epics: engineConfig.redux
