@@ -1,8 +1,9 @@
-import { Button } from "@cianciarusocataldo/modular-ui";
 import React from "react";
 
+import { Button } from "@cianciarusocataldo/modular-ui";
+
 class ErrorBoundary extends React.Component<
-  { fallback?: JSX.Element },
+  { fallback?: () => JSX.Element },
   { hasError: boolean }
 > {
   constructor(props) {

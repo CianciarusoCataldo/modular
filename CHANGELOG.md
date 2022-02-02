@@ -1,3 +1,9 @@
+# 0.4.0
+
+- Modular-engine updated
+- Clean up
+- Error fallback customizable through config.error field
+
 # 0.3.0
 
 - Theme actions updated

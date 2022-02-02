@@ -14,6 +14,7 @@ export type Theme = {
 
 export type AppConfig = {
   preloader?: string;
+  error?: () => JSX.Element;
   pagesRendering?: (route: string) => RouteProps["component"];
   darkMode?: boolean;
   drawer?: {

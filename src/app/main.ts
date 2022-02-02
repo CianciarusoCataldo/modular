@@ -45,16 +45,7 @@ export const initApplication = (callback: (App: JSX.Element) => any) => {
       initi18n(engineConfig);
 
       const { store, history } = initStore({
-        CONFIG: engineConfig,
-        epics: engineConfig.redux
-          ? engineConfig.redux.epics || []
-          : defaultEngineConfig.redux.epics,
-        reducers: engineConfig.redux
-          ? engineConfig.redux.reducers || {}
-          : defaultEngineConfig.redux.reducers,
-        initialState: engineConfig.redux
-          ? engineConfig.redux.preload || {}
-          : defaultEngineConfig.redux.preload,
+        config: engineConfig,
       });
 
       import("./components/MainApp").then(({ default: MainApp }) => {

@@ -39,7 +39,7 @@ const MainApp = ({
 
   return (
     <React.Suspense fallback={<Preloader />}>
-      <ErrorBoundary>
+      <ErrorBoundary fallback={config.error}>
         {engine.ui && <ToastContainer />}
         <Provider store={store}>
           {engine.modal && <AppModal modals={config.modals || {}} />}
