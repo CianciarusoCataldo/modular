@@ -8,8 +8,6 @@ import { Provider } from "react-redux";
 import { History } from "history";
 import { Store } from "@reduxjs/toolkit";
 
-import { Config } from "@cianciarusocataldo/modular-engine";
-
 import ErrorBoundary from "../AppErrorBoundary";
 
 const MainApp = ({
@@ -21,7 +19,7 @@ const MainApp = ({
 }: {
   store: Store;
   history: History;
-  engine: Config["redux"];
+  engine: { ui?: boolean; modal?: boolean };
   config: AppConfig;
   theme: Theme;
 }) => {
