@@ -1,3 +1,9 @@
+# 0.6.0
+
+- Configs as parameters (if not set, default standard predefined files will be used)
+- Types updated
+- Statically importing modular-engine instead of promise
+
 # 0.5.0
 
 - Logic updates

@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://cianciarusocataldo.github.io/modular-app",
   "dependencies": {
-    "@cianciarusocataldo/modular-ui": "^4.0.1",
     "@cianciarusocataldo/modular-engine": "^2.2.0",
+    "@cianciarusocataldo/modular-ui": "^4.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
