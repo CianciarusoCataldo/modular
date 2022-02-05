@@ -1,3 +1,9 @@
+# 0.5.0
+
+- Logic updates
+- Better types definitions
+- Unit tests
+
 # 0.4.0
 
 - Modular-engine updated
