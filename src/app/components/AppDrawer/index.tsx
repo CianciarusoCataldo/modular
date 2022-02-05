@@ -9,6 +9,7 @@ import {
 
 import { Drawer, DrawerElement } from "@cianciarusocataldo/modular-ui";
 
+/* istanbul ignore next */
 const AppDrawer = ({
   logo,
   children,

@@ -30,7 +30,7 @@ const MainApp = ({
   const FooterContent = config.footer;
   const DrawerContent = config.drawer?.content;
   const DrawerLogo = config.drawer?.logo;
-  const Preloader = config.preloader || (() => <div />);
+  const Preloader = config.preloader;
   const AppContainer = React.lazy(() => import("../AppContainer"));
   const AppDrawer = React.lazy(() => import("../AppDrawer"));
   const AppModal = React.lazy(() => import("../AppModal"));
@@ -38,10 +38,10 @@ const MainApp = ({
   const ToastContainer = React.lazy(() => import("../ToastContainer"));
 
   return (
-    <React.Suspense fallback={<Preloader />}>
-      <ErrorBoundary fallback={config.error}>
-        {engine.ui && <ToastContainer />}
-        <Provider store={store}>
+    <React.Suspense fallback={Preloader ? <Preloader /> : null}>
+      <Provider store={store}>
+        <ErrorBoundary fallback={config.error}>
+          {engine.ui && <ToastContainer />}
           {engine.modal && <AppModal modals={config.modals || {}} />}
           {engine.ui && config.drawer && (
             <AppDrawer
@@ -103,8 +103,8 @@ const MainApp = ({
               </AppContainer>
             )}
           </div>
-        </Provider>
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </Provider>
     </React.Suspense>
   );
 };

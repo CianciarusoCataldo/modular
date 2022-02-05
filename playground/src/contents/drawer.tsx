@@ -80,4 +80,4 @@ export const DrawerContent = () => {
   );
 };
 
-export const DrawerElements: DrawerElement = [];
+export const DrawerElements: DrawerElement[] = [];

@@ -14,27 +14,32 @@ const defaultEngineConfig = {
   redux: { ui: true, modal: true, epics: [], reducers: {}, preload: {} },
 };
 
-const defaultAppConfig = { darkMode: false };
+const defaultAppConfig = {};
 
-var theme = defaultTheme;
-
-try {
-  theme = require("theme.config.json");
-} catch (e) {
-  process.env.NODE_ENV === "development" &&
-    console.log("Theme file not found, using default theme.");
-  theme = defaultTheme;
-}
-
-export const initApplication = (callback: (App: JSX.Element) => any) => {
+export const initApplication = ({
+  onComplete,
+}: {
+  onComplete: (App: JSX.Element) => any;
+}) => {
+  let theme = defaultTheme;
   let config = defaultAppConfig;
   let engineConfig = defaultEngineConfig;
 
+  /*istanbul ignore next */
+  try {
+    theme = require("theme.config.json");
+  } catch (e) {
+    process.env.NODE_ENV === "development" &&
+      console.log("theme.config file not found, using default theme");
+    theme = defaultTheme;
+  }
+
   import("@cianciarusocataldo/modular-engine").then(
-    ({ initStore, initi18n, setDarkMode }) => {
+    ({ initStore, initi18n }) => {
+      /*istanbul ignore next */
       try {
         engineConfig = require("engine.config").default;
-      } catch {
+      } catch (e) {
         process.env.NODE_ENV === "development" &&
           console.log(
             "engine.config file not found, using default engine config"
@@ -49,17 +54,16 @@ export const initApplication = (callback: (App: JSX.Element) => any) => {
       });
 
       import("./components/MainApp").then(({ default: MainApp }) => {
+        /*istanbul ignore next */
         try {
           config = require("app.config").default;
-        } catch {
+        } catch (e) {
+          process.env.NODE_ENV === "development" &&
+            console.log("app.config file not found, using default app config");
           config = defaultAppConfig;
         }
 
-        engineConfig.redux.ui &&
-          config.darkMode !== undefined &&
-          store.dispatch(setDarkMode(config.darkMode));
-
-        callback(
+        onComplete(
           MainApp({
             store,
             history,

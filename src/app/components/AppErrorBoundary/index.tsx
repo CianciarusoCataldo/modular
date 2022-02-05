@@ -2,6 +2,7 @@ import React from "react";
 
 import { Button } from "@cianciarusocataldo/modular-ui";
 
+/* istanbul ignore next */
 class ErrorBoundary extends React.Component<
   { fallback?: () => JSX.Element },
   { hasError: boolean }

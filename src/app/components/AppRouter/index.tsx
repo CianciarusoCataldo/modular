@@ -8,6 +8,7 @@ import { getHomePage, getPages } from "@cianciarusocataldo/modular-engine";
 
 import { Redirect, Route, RouteProps, Router, Switch } from "react-router-dom";
 
+/* istanbul ignore next */
 const AppRouter = ({
   history,
   renderCallback,

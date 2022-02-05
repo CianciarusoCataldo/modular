@@ -9,8 +9,11 @@ const appConfig = {
   pagesRendering: (route) => lazy(() => import(`pages/${route}`)),
   content: App,
   modals: {},
-  darkMode: true,
-  preloader: () => <div className="preloader" />,
+  preloader: () => (
+    <div>
+      <div className="preloader" />
+    </div>
+  ),
   header: HeaderContent,
   footer: FooterContent,
   drawer: {

@@ -3,9 +3,10 @@ const engineConfig = {
   redux: {
     modal: true,
     ui: true,
-    epics: [],
     reducers: {},
     preload: {},
+    epics: [],
+    darkMode: true,
   },
   router: {
     basename: "/modular-app",

@@ -12,6 +12,7 @@ import {
 
 import { Modal } from "@cianciarusocataldo/modular-ui";
 
+/* istanbul ignore next */
 const AppModal = ({
   modals,
 }: {

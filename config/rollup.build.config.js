@@ -18,7 +18,7 @@ export default [
       {
         dir: "playground/src/modular-preview",
         format: "esm",
-        plugins: [terser()],
+       // plugins: [terser()],
         strict: false,
       },
       {
@@ -30,7 +30,7 @@ export default [
       {
         dir: pkg.module,
         format: "esm",
-        plugins: [terser()],
+       // plugins: [terser()],
         strict: false,
       },
     ],

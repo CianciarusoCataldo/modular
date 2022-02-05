@@ -16,11 +16,13 @@ if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
 }
 
 import("modular-preview").then(({ initApplication }) => {
-  initApplication((App) => {
-    import("react-dom").then(({ render }) => {
-      render(App, document.getElementById("root"));
-      let Preloader = document.getElementById("preloader");
-      if (Preloader) Preloader.style.visibility = "hidden";
-    });
+  initApplication({
+    onComplete: (App) => {
+      import("react-dom").then(({ render }) => {
+        render(App, document.getElementById("root"));
+        let Preloader = document.getElementById("preloader");
+        if (Preloader) Preloader.style.visibility = "hidden";
+      });
+    },
   });
 });

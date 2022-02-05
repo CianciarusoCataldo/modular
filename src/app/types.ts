@@ -13,10 +13,9 @@ export type Theme = {
 } & Record<string, any>;
 
 export type AppConfig = {
-  preloader?: string;
+  preloader?: () => JSX.Element;
   error?: () => JSX.Element;
   pagesRendering?: (route: string) => RouteProps["component"];
-  darkMode?: boolean;
   drawer?: {
     content: () => JSX.Element;
     logo: () => JSX.Element;
