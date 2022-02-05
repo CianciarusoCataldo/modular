@@ -37,6 +37,8 @@ const runTest = () => {
 
   describe("\n   initApplication\n", () => {
     test("init with default config", () => {
+      process.env.NODE_ENV === "development";
+
       initApplication({
         onComplete: (App) => {
           const wrapper = mount(App);
@@ -46,6 +48,8 @@ const runTest = () => {
     });
 
     test("init with given config", () => {
+      process.env.NODE_ENV === "test";
+
       initApplication({
         engine: { redux: defaultEngineConfig },
         appConfig: appConfig,

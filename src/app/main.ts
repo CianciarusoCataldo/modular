@@ -5,6 +5,13 @@ import {
 } from "@cianciarusocataldo/modular-engine";
 import { AppConfig, Theme } from "./types";
 
+/*istanbul ignore next */
+const printDev = (output: any) => {
+  if (process.env.NODE_ENV === "development") {
+    console.log(output);
+  }
+};
+
 const defaultTheme = {
   header: {
     height: "20%",
@@ -41,12 +48,12 @@ export const initApplication = ({
   if (inputTheme) {
     theme = inputTheme;
   } else {
-    /*istanbul ignore next */
     try {
+      /*istanbul ignore next */
       theme = require("theme.config.json");
     } catch (e) {
-      process.env.NODE_ENV === "development" &&
-        console.log("theme.config file not found, using default theme");
+      printDev("theme.config file not found, using default theme");
+
       theme = defaultTheme;
     }
   }
@@ -54,14 +61,11 @@ export const initApplication = ({
   if (inputEngineConfig) {
     engineConfig = inputEngineConfig;
   } else {
-    /*istanbul ignore next */
     try {
+      /*istanbul ignore next */
       engineConfig = require("engine.config").default;
     } catch (e) {
-      process.env.NODE_ENV === "development" &&
-        console.log(
-          "engine.config file not found, using default engine config"
-        );
+      printDev("engine.config file not found, using default engine config");
       engineConfig = defaultEngineConfig;
     }
   }
@@ -76,12 +80,11 @@ export const initApplication = ({
     if (inputAppConfig) {
       config = inputAppConfig;
     } else {
-      /*istanbul ignore next */
       try {
+        /*istanbul ignore next */
         config = require("app.config").default;
       } catch (e) {
-        process.env.NODE_ENV === "development" &&
-          console.log("app.config file not found, using default app config");
+        printDev("app.config file not found, using default app config");
         config = defaultAppConfig;
       }
     }

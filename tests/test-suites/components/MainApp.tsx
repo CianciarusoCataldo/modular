@@ -1,11 +1,7 @@
 import React from "react";
-
-import {
-  closeDrawer,
-  initStore,
-  openDrawer,
-} from "@cianciarusocataldo/modular-engine";
 import { mount } from "enzyme";
+
+import { initStore } from "@cianciarusocataldo/modular-engine";
 
 import MainApp from "../../../src/app/components/MainApp";
 
@@ -32,7 +28,7 @@ const defaultEngineConfig = {
 const appConfig = {
   pagesRendering: () => React.lazy(() => import("../constants/TestComponent")),
   content: () => <div />,
-  modals: {},
+  modals: { test: () => <div /> },
   preloader: () => (
     <div>
       <div className="preloader" />
@@ -64,11 +60,10 @@ const MainAppTests = () => {
       expect(wrapper);
     });
 
-    test(" with defined config params", () => {
+    test("with defined config params", () => {
       const { store, history } = initStore({
         config: { redux: defaultEngineConfig },
       });
-      store.dispatch(openDrawer());
       const testProps = {
         config: appConfig,
         engine: defaultEngineConfig,
@@ -77,9 +72,6 @@ const MainAppTests = () => {
         history,
       };
       const wrapper = mount(<MainApp {...testProps} />);
-      store.dispatch(openDrawer());
-      store.dispatch(closeDrawer());
-
       expect(wrapper);
     });
   });

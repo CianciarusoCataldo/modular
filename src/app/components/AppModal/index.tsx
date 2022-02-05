@@ -12,16 +12,17 @@ import {
 
 import { Modal } from "@cianciarusocataldo/modular-ui";
 
-/* istanbul ignore next */
 const AppModal = ({
   modals,
 }: {
   modals: Record<string, () => JSX.Element>;
 }) => {
   const dispatch = useDispatch();
+
   const onClose = useCallback(() => {
     dispatch(closeModal());
   }, [dispatch]);
+
   const type = useSelector(getModalType);
   const isVisible = useSelector(isModalVisible);
   const i18n = useSelector(geti18nConfig);

@@ -2,6 +2,9 @@ import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 /* eslint-disable */
+global.console = { log: jest.fn() };
+
+/* eslint-disable */
 global.navigator.clipboard = {
   writeText: jest.fn(),
   readText: jest.fn(),

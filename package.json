@@ -1,7 +1,7 @@
 {
   "name": "@cianciarusocataldo/modular",
   "description": "Setup and configure your web app with few steps",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "main": "dist/index.js",
   "module": "dist",
   "typings": "dist/index.d.ts",
@@ -39,6 +39,7 @@
     "jest": "^27.4.7",
     "jest-transform-stub": "^2.0.0",
     "react": ">=16.x",
+    "react-redux": "^7.2.6",
     "rollup": "^2.66.1",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-banner2": "^1.2.2",

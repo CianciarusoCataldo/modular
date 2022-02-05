@@ -9,7 +9,6 @@ import {
 
 import { Drawer, DrawerElement } from "@cianciarusocataldo/modular-ui";
 
-/* istanbul ignore next */
 const AppDrawer = ({
   logo,
   children,
@@ -22,18 +21,26 @@ const AppDrawer = ({
   const dispatch = useDispatch();
   const isDrawerShowing = useSelector(isDrawerOpen);
 
+  /* istanbul ignore next */
   React.useEffect(() => {
     if (isDrawerShowing) {
       let element = document.getElementById("modular-drawer");
-
-      document.getElementById("app-container")!.onclick = function (e: Event) {
-        if (element && !element.contains(e.target as Node)) {
-          dispatch(closeDrawer());
-        }
-      };
-    } else {
-      document.getElementById("app-container")!.onclick = null;
+      let app = document.getElementById("app-container");
+      if (app) {
+        app.onclick = function (e: Event) {
+          if (element && !element.contains(e.target as Node)) {
+            dispatch(closeDrawer());
+          }
+        };
+      }
     }
+    return () => {
+      let app = document.getElementById("app-container");
+
+      if (app) {
+        app.onclick = null;
+      }
+    };
   }, [dispatch, isDrawerShowing]);
 
   const DrawerComponent = driveWithDarkMode(Drawer);
