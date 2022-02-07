@@ -12,3 +12,61 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained)
 
 Setup and configure your web app with few steps
+
+---
+
+
+## Summary
+- [Installation](#installation)
+- [Tests](#tests)
+- [Included libraries](#included-libraries)
+- [Authors](#authors)
+- [License](#license)
+
+---
+
+### Installation
+
+If you want to use this library inside your project, just install it:
+```
+
+npm i @cianciarusocataldo/modular
+
+```
+
+---
+
+
+## Tests
+Unit tests for every lib function are located inside `tests` folder. The test script is executed with pre-defined test command:
+```
+npm run test
+```
+
+This lib is analyzed and tested with different automated code analysis systems:
+- [Code Climate](https://codeclimate.com/github/CianciarusoCataldo/modular)
+- [CodeCov](https://app.codecov.io/gh/CianciarusoCataldo/modular)
+- [CodeFactor](https://www.codefactor.io/repository/github/cianciarusocataldo/modular)
+- [Scrutinizer](https://scrutinizer-ci.com/g/CianciarusoCataldo/modular/)
+
+
+---
+
+## Included libraries
+- [Modular-ui](https://github.com/CianciarusoCataldo/modular-ui) - for UI components
+- [Modular-engine](https://github.com/CianciarusoCataldo/modular-engine) - for enhanced global state, app localization and routes history 
+- Modular is written entirely with [Typescript](https://www.typescriptlang.org/)
+
+---
+
+## Authors
+
+- [**Cataldo Cianciaruso**](https://github.com/CianciarusoCataldo)
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+
