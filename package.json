@@ -1,6 +1,6 @@
 {
   "name": "@cianciarusocataldo/modular",
-  "description": "Setup and configure your web app with few steps",
+  "description": "Setup and configure your web app with few steps and no worries",
   "version": "0.7.0",
   "main": "dist/index.js",
   "module": "dist",
