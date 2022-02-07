@@ -1,6 +1,7 @@
 import React from "react";
 
 import { mount } from "enzyme";
+
 import AppErrorBoundary from "../../../src/app/components/AppErrorBoundary";
 
 const AppErrorBoundaryTest = () => {
@@ -15,15 +16,22 @@ const AppErrorBoundaryTest = () => {
     });
 
     test("renders fallback if an error occurs", () => {
-      const ComponentWithError = () => {
-        throw new Error("Error thrown from child");
+      const error = console.error;
+      console.error = () => {};
+      const ComponentWithError = ({}) => {
+        throw new Error("test error");
       };
-      const wrapper = mount(
+
+      const ComponentToTest = (
         <AppErrorBoundary>
           <ComponentWithError />
         </AppErrorBoundary>
       );
+
+      const wrapper = mount(ComponentToTest);
+
       wrapper.find(".error-button").at(1).simulate("click");
+      console.error = error;
       expect(wrapper);
     });
   });

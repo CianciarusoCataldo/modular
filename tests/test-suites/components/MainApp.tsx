@@ -1,7 +1,9 @@
 import React from "react";
-import { mount } from "enzyme";
 
-import { initStore } from "@cianciarusocataldo/modular-engine";
+import { Store } from "redux";
+import { History } from "history";
+
+import { mount } from "enzyme";
 
 import MainApp from "../../../src/app/components/MainApp";
 
@@ -43,27 +45,21 @@ const appConfig = {
   },
 };
 
-const MainAppTests = () => {
+const MainAppTests = (store: Store, history: History) => {
   describe("\n     MainApp\n", () => {
     test("with default config params", () => {
-      const { store, history } = initStore({
-        config: { redux: { ui: false, modal: false } },
-      });
       const testProps = {
         theme: defaultTheme,
         store,
         history,
-        config: { content: () => <div /> },
-        engine: { ui: false, modal: false },
+        config: {},
+        engine: {},
       };
       const wrapper = mount(<MainApp {...testProps} />);
       expect(wrapper);
     });
 
     test("with defined config params", () => {
-      const { store, history } = initStore({
-        config: { redux: defaultEngineConfig },
-      });
       const testProps = {
         config: appConfig,
         engine: defaultEngineConfig,

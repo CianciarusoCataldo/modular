@@ -1,14 +1,13 @@
 import React from "react";
 
-import { initStore } from "@cianciarusocataldo/modular-engine";
-import { mount } from "enzyme";
+import { Store } from "redux";
+
 import { Provider } from "react-redux";
+import { mount } from "enzyme";
+
 import AppContainer from "../../../src/app/components/AppContainer";
 
-const AppContainerTest = () => {
-  const { store } = initStore({
-    config: { redux: { ui: true, modal: true } },
-  });
+const AppContainerTest = (store: Store) => {
   describe("\n     AppContainer\n", () => {
     test("renders correctly", () => {
       const wrapper = mount(

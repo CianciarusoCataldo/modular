@@ -1,5 +1,7 @@
-import { mount } from "enzyme";
 import React from "react";
+
+import { mount } from "enzyme";
+
 import { initApplication } from "../../src";
 
 const runTest = () => {
@@ -57,6 +59,19 @@ const runTest = () => {
         onComplete: (App) => {
           const wrapper = mount(App);
           expect(wrapper);
+        },
+      });
+    });
+
+    test("onStart callback is called at the start of the init process", () => {
+      const onStartStub = jest.fn();
+      initApplication({
+        engine: { redux: defaultEngineConfig },
+        appConfig: appConfig,
+        theme: defaultTheme,
+        onStart: () => onStartStub(),
+        onComplete: (App) => {
+          expect(onStartStub).toBeCalled;
         },
       });
     });

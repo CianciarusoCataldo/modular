@@ -1,22 +1,19 @@
-import { mount } from "enzyme";
 import React from "react";
-import { Provider } from "react-redux";
-import AppDrawer from "../../../src/app/components/AppDrawer";
-import {
-  combineReducers,
-  configureStore,
-  createReducer,
-} from "@reduxjs/toolkit";
 
-const AppDrawerTest = () => {
-  const store = configureStore({
-    preloadedState: { ui: { isDrawerOpen: true } },
-    reducer: combineReducers({
-      ui: createReducer({ isDrawerOpen: true }, () => {}),
-    }),
-  });
+import { Store } from "redux";
+
+import { mount } from "enzyme";
+import { Provider } from "react-redux";
+
+import { openDrawer } from "@cianciarusocataldo/modular-engine";
+
+import AppDrawer from "../../../src/app/components/AppDrawer";
+
+const AppDrawerTest = (store: Store) => {
   describe("\n     AppDrawer\n", () => {
-    test("renders correctly", () => {
+    test("renders correctly when opened", () => {
+      store.dispatch(openDrawer());
+
       let wrapper = mount(
         <Provider store={store}>
           <div className="app-container">
@@ -24,10 +21,20 @@ const AppDrawerTest = () => {
           </div>
         </Provider>
       );
+      expect(wrapper.find("#modular-drawer").length).toBeGreaterThan(0);
+    });
 
+    test("renders correctly when closed", () => {
+      let wrapper = mount(
+        <Provider store={store}>
+          <div className="app-container">
+            <AppDrawer elements={[]} children={<div />} />
+          </div>
+        </Provider>
+      );
       wrapper.find(".close-button").at(1).simulate("click");
 
-      expect(wrapper);
+      expect(store.getState().modal.isVisible).toBe(false);
     });
   });
 };

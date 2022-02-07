@@ -34,16 +34,20 @@ export const initApplication = ({
   appConfig: inputAppConfig,
   engine: inputEngineConfig,
   onComplete,
+  onStart,
   theme: inputTheme,
 }: {
   appConfig?: AppConfig;
   engine?: Config;
   onComplete: (App: JSX.Element) => any;
+  onStart?: () => any;
   theme?: Theme;
 }) => {
   let theme: Theme = defaultTheme;
   let config: AppConfig = defaultAppConfig;
   let engineConfig: Config = defaultEngineConfig;
+
+  onStart && onStart();
 
   if (inputTheme) {
     theme = inputTheme;
