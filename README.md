@@ -8,6 +8,7 @@
 ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability)
 ![Code Climate coverage](https://img.shields.io/codeclimate/coverage-letter/CianciarusoCataldo/modular?label=Code%20Climate%20coverage)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/cianciarusocataldo/modular?label=CodeFactor%20code%20quality)
+![Coveralls](https://img.shields.io/coveralls/github/CianciarusoCataldo/modular?label=Coveralls%20coverage)
 [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained)
 
@@ -48,6 +49,7 @@ This lib is analyzed and tested with different automated code analysis systems:
 - [CodeCov](https://app.codecov.io/gh/CianciarusoCataldo/modular)
 - [CodeFactor](https://www.codefactor.io/repository/github/cianciarusocataldo/modular)
 - [Scrutinizer](https://scrutinizer-ci.com/g/CianciarusoCataldo/modular/)
+- [Coveralls](https://coveralls.io/github/CianciarusoCataldo/modular)
 
 
 ---
