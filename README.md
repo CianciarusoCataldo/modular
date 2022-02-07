@@ -7,6 +7,7 @@
 ![Codecov](https://img.shields.io/codecov/c/github/CianciarusoCataldo/modular?label=CodeCov%20coverage)
 ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability)
 ![Code Climate coverage](https://img.shields.io/codeclimate/coverage-letter/CianciarusoCataldo/modular?label=Code%20Climate%20coverage)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/cianciarusocataldo/modular?label=CodeFactor%20code%20quality)
 [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained)
 
