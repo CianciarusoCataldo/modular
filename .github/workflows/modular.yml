@@ -49,4 +49,7 @@ jobs:
       uses: paambaati/codeclimate-action@v3.0.0
       env:
         CC_TEST_REPORTER_ID: 06fc35dc0317bf74adde3dc21fec03ca59c3366719e157f88d233b8caf96fab9
-
+    - name: Upload coverage to coveralls.io
+      uses: coverallsapp/github-action@v1.1.2
+      with:
+        github-token: ${{ github.token }}
