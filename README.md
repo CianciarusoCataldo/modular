@@ -8,8 +8,8 @@
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/cianciarusocataldo/modular?label=CodeFactor%20code%20quality)
 ![Codecov](https://img.shields.io/codecov/c/github/CianciarusoCataldo/modular?label=CodeCov%20coverage)
 ![Coveralls](https://img.shields.io/coveralls/github/CianciarusoCataldo/modular?label=Coveralls%20coverage)
-![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality)
 ![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/CianciarusoCataldo/modular?label=Scrutinizer%20build)
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality)
 [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained)
 
