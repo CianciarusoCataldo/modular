@@ -2,13 +2,12 @@ name: Modular CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-  
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,17 +15,16 @@ jobs:
         node-version: [15.x, 16.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i
-    - run: npm run build
- 
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm i
+      - run: npm run build
+
   unit-tests:
-  
     runs-on: ubuntu-latest
 
     strategy:
@@ -34,27 +32,28 @@ jobs:
         node-version: [15.x, 16.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i
-    - run: npm run build
-    - run: npm test
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
-    - name: Upload coverage to Code Climate
-      uses: paambaati/codeclimate-action@v3.0.0
-      env:
-        CC_TEST_REPORTER_ID: 06fc35dc0317bf74adde3dc21fec03ca59c3366719e157f88d233b8caf96fab9
-    - name: Upload coverage to coveralls.io
-      uses: coverallsapp/github-action@v1.1.2
-      with:
-        github-token: ${{ github.token }}
-    
-    - name: Upload coverage to Coverity 
-      uses: vapier/coverity-scan-action@v1
-      with:
-        token: ${{ secrets.COVERITY_SCAN_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm i
+      - run: npm run build
+      - run: npm test
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+      - name: Upload coverage to Code Climate
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: 06fc35dc0317bf74adde3dc21fec03ca59c3366719e157f88d233b8caf96fab9
+      - name: Upload coverage to coveralls.io
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Upload coverage to Coverity
+        uses: vapier/coverity-scan-action@v1
+        with:
+          email: ${{ secrets.COVERITY_SCAN_EMAIL }}
+          token: ${{ secrets.COVERITY_SCAN_TOKEN }}
