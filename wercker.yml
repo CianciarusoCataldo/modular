@@ -1,0 +1,15 @@
+box: node
+build:
+  steps:
+    - script:
+        name: modular lib build
+        code: |
+          npm i
+          npm run build
+test:
+  steps:
+    - script:
+        name: modular lib tests
+        code: |
+          npm i
+          npm run test
