@@ -6,7 +6,7 @@
 ![CircleCI](https://img.shields.io/circleci/build/github/CianciarusoCataldo/modular?label=CircleCI%20build&logo=circleci&logoWidth=18) [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml)
 
 ### Code analysis
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@cianciarusocataldo/modular?label=Libraries.io%20dependency%20status) ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability&logo=codeclimate&logoWidth=18) ![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/CianciarusoCataldo/modular?label=Scrutinizer%20build) ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/CianciarusoCataldo/modular.svg?logo=lgtm&logoWidth=18&label=LGTM%20code%20quality)](https://lgtm.com/projects/g/CianciarusoCataldo/modular/context:javascript) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) 
+![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@cianciarusocataldo/modular?label=Libraries.io%20dependency%20status) ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability&logo=codeclimate&logoWidth=18) ![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/CianciarusoCataldo/modular?label=Scrutinizer%20build) ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/CianciarusoCataldo/modular.svg?logo=lgtm&logoWidth=18&label=LGTM%20code%20quality)](https://lgtm.com/projects/g/CianciarusoCataldo/modular/context:javascript) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) ![AppVeyor](https://img.shields.io/appveyor/build/CianciarusoCataldo/modular?label=AppVeyor%20build) 
 
 ### Tests coverage
 ![Code Climate coverage](https://img.shields.io/codeclimate/coverage-letter/CianciarusoCataldo/modular?label=Code%20Climate%20coverage&logo=codeclimate&logoWidth=18)
@@ -14,10 +14,8 @@
 ![Codecov](https://img.shields.io/codecov/c/github/CianciarusoCataldo/modular?label=CodeCov%20coverage&logo=codecov&logoWidth=18)
 ![Coveralls](https://img.shields.io/coveralls/github/CianciarusoCataldo/modular?label=Coveralls%20coverage&&logo=coveralls&logoWidth=18)
 ---
-
+<br><br>
 Setup and configure your web app with few steps
-
----
 
 
 ## Summary
