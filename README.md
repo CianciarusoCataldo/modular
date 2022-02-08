@@ -54,7 +54,7 @@ Unit tests for every lib function are located inside `tests` folder. The test sc
 npm run test
 ```
 
-This lib is analyzed and tested with different automated code analysis systems:
+This lib is analyzed and tested with:
 
 - [AppVeyor](https://ci.appveyor.com/project/CianciarusoCataldo/modular)
 - [CircleCI](https://app.circleci.com/pipelines/github/CianciarusoCataldo/modular)
