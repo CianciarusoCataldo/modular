@@ -1,4 +1,4 @@
-![output-onlinepngtools](https://user-images.githubusercontent.com/47371276/152907365-aa0d89f0-9998-423d-9cf3-72043ebd7dff.png)
+![modular-logo](https://user-images.githubusercontent.com/47371276/152907365-aa0d89f0-9998-423d-9cf3-72043ebd7dff.png)
 
 
 # modular
