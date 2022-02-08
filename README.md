@@ -3,7 +3,8 @@
 
 
 ### Continuous Integration 
-![CircleCI](https://img.shields.io/circleci/build/github/CianciarusoCataldo/modular?label=CircleCI&logo=circleci&logoWidth=18&style=plastic) [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml) ![Wercker CI Run](https://img.shields.io/wercker/ci/6201e5a4fd7149080044d196?label=Wercker%20CI&style=plastic&logo=oracle)
+![CircleCI](https://img.shields.io/circleci/build/github/CianciarusoCataldo/modular?label=CircleCI&logo=circleci&logoWidth=18&style=plastic) [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml) ![Wercker CI Run](https://img.shields.io/wercker/ci/6201e5a4fd7149080044d196?label=Wercker%20CI&style=plastic&logo=oracle) ![Cirrus CI - Specific Branch Build Status](https://img.shields.io/cirrus/github/CianciarusoCataldo/modular/main?label=Cirrus%20CI&style=plastic&logo=cirrusci)
+
 
 ### Code analysis
 ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@cianciarusocataldo/modular?label=Libraries.io%20dependency%20status&style=plastic) ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability&logo=codeclimate&logoWidth=18&style=plastic) ![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/CianciarusoCataldo/modular?label=Scrutinizer%20build&style=plastic) ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality&style=plastic&logo=scrutinizer) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/CianciarusoCataldo/modular.svg?logo=lgtm&logoWidth=18&label=LGTM%20code%20quality&style=plastic&logo=scrutinizer)](https://lgtm.com/projects/g/CianciarusoCataldo/modular/context:javascript) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) ![AppVeyor](https://img.shields.io/appveyor/build/CianciarusoCataldo/modular?label=AppVeyor%20build&logo=appveyor) 
@@ -46,6 +47,7 @@ npm run test
 This lib is analyzed and tested with different automated code analysis systems:
 - [AppVeyor](https://ci.appveyor.com/project/CianciarusoCataldo/modular)
 - [CircleCI](https://app.circleci.com/pipelines/github/CianciarusoCataldo/modular)
+- [Cirrus CI](https://cirrus-ci.com/github/CianciarusoCataldo/modular)
 - [Code Climate](https://codeclimate.com/github/CianciarusoCataldo/modular)
 - [CodeCov](https://app.codecov.io/gh/CianciarusoCataldo/modular)
 - [CodeFactor](https://www.codefactor.io/repository/github/cianciarusocataldo/modular)
