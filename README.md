@@ -1,4 +1,6 @@
-![modular-logo](https://user-images.githubusercontent.com/47371276/152907365-aa0d89f0-9998-423d-9cf3-72043ebd7dff.png)
+<div align="center">
+<img width="640px" height="380px" alt="" src="https://user-images.githubusercontent.com/47371276/152907365-aa0d89f0-9998-423d-9cf3-72043ebd7dff.png" />
+</div>
 
 # modular
 
