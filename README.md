@@ -31,9 +31,7 @@ Setup and configure your web app with few steps
 
 If you want to use this library inside your project, just install it:
 ```
-
 npm i @cianciarusocataldo/modular
-
 ```
 
 ---
@@ -46,13 +44,14 @@ npm run test
 ```
 
 This lib is analyzed and tested with different automated code analysis systems:
+- [AppVeyor](https://ci.appveyor.com/project/CianciarusoCataldo/modular)
 - [CircleCI](https://app.circleci.com/pipelines/github/CianciarusoCataldo/modular)
 - [Code Climate](https://codeclimate.com/github/CianciarusoCataldo/modular)
 - [CodeCov](https://app.codecov.io/gh/CianciarusoCataldo/modular)
 - [CodeFactor](https://www.codefactor.io/repository/github/cianciarusocataldo/modular)
-- [Scrutinizer](https://scrutinizer-ci.com/g/CianciarusoCataldo/modular/)
 - [Coveralls](https://coveralls.io/github/CianciarusoCataldo/modular)
 - [Hound](https://houndci.com/)
+- [Scrutinizer](https://scrutinizer-ci.com/g/CianciarusoCataldo/modular/)
 
 
 ---
