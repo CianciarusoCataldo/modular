@@ -1,19 +1,19 @@
 # modular
-![NPM](https://img.shields.io/npm/l/@cianciarusocataldo/modular?label=License)
-![npm (scoped)](https://img.shields.io/npm/v/@cianciarusocataldo/modular?color=blue&style=plastic&label=Latest%20version)
-![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@cianciarusocataldo/modular?label=Package%20size)
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@cianciarusocataldo/modular?label=Libraries.io%20dependency%20status)
-![CircleCI](https://img.shields.io/circleci/build/github/CianciarusoCataldo/modular?label=CircleCI%20buiild)
-![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability)
-![Code Climate coverage](https://img.shields.io/codeclimate/coverage-letter/CianciarusoCataldo/modular?label=Code%20Climate%20coverage)
-![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/cianciarusocataldo/modular?label=CodeFactor%20code%20quality)
-![Codecov](https://img.shields.io/codecov/c/github/CianciarusoCataldo/modular?label=CodeCov%20coverage)
-![Coveralls](https://img.shields.io/coveralls/github/CianciarusoCataldo/modular?label=Coveralls%20coverage)
-![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/CianciarusoCataldo/modular?label=Scrutinizer%20build)
-![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality)
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
-[![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml)
-![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained)
+![NPM](https://img.shields.io/npm/l/@cianciarusocataldo/modular?label=License&style=for-the-badge) ![npm (scoped)](https://img.shields.io/npm/v/@cianciarusocataldo/modular?color=orange%20&label=Latest%20version&style=for-the-badge) ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@cianciarusocataldo/modular?label=Package%20size&style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained&style=for-the-badge) 
+
+
+### Continuous Integration 
+![CircleCI](https://img.shields.io/circleci/build/github/CianciarusoCataldo/modular?label=CircleCI%20build&logo=circleci&logoWidth=18) [![Modular CI](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml/badge.svg)](https://github.com/CianciarusoCataldo/modular/actions/workflows/modular.yml)
+
+### Code analysis
+![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@cianciarusocataldo/modular?label=Libraries.io%20dependency%20status) ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CianciarusoCataldo/modular?label=Code%20Climate%20maintainability&logo=codeclimate&logoWidth=18) ![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/CianciarusoCataldo/modular?label=Scrutinizer%20build) ![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/CianciarusoCataldo/modular?label=Scrutinizer%20code%20quality) [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/CianciarusoCataldo/modular.svg?logo=lgtm&logoWidth=18&label=LGTM%20code%20quality)](https://lgtm.com/projects/g/CianciarusoCataldo/modular/context:javascript) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com) 
+
+### Tests coverage
+![Code Climate coverage](https://img.shields.io/codeclimate/coverage-letter/CianciarusoCataldo/modular?label=Code%20Climate%20coverage&logo=codeclimate&logoWidth=18)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/cianciarusocataldo/modular?label=CodeFactor%20code%20quality&logo=codefactor&logoWidth=18)
+![Codecov](https://img.shields.io/codecov/c/github/CianciarusoCataldo/modular?label=CodeCov%20coverage&logo=codecov&logoWidth=18)
+![Coveralls](https://img.shields.io/coveralls/github/CianciarusoCataldo/modular?label=Coveralls%20coverage&&logo=coveralls&logoWidth=18)
+---
 
 Setup and configure your web app with few steps
 
