@@ -11,7 +11,7 @@
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/@cianciarusocataldo/modular?label=Snyk%20Vulnerabilities&style=for-the-badge&logo=snyk)
 ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@cianciarusocataldo/modular?label=Libraries.io%20dependency%20status&logo=librariesdotio&style=for-the-badge)
 
----
+* * *
 
 ## Status
 
