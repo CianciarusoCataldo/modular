@@ -1,39 +1,59 @@
-# 0.7.0
+# Changelog
 
-- Custom `onStart` callback, called at the start of the init process
+## Versions
 
-# 0.6.0
+-   [0.7.0](#070)
+-   [0.6.0](#070)
+-   [0.5.0](#070)
+-   [0.4.0](#070)
+-   [0.3.0](#070)
+-   [0.2.0](#070)
+-   [0.1.0](#070)
 
-- Configs as parameters (if not set, default standard predefined files will be used)
-- Types updated
-- Statically importing `modular-engine` instead of promise
+<br>
 
-# 0.5.0
+* * *
 
-- Logic updates
-- Better types definitions
-- Unit tests
+## Changes
 
-# 0.4.0
+<br>
 
-- Modular-engine updated
-- Clean up
-- Error `fallback` customizable through config.error field
+### 0.7.0
 
-# 0.3.0
+-   Custom `onStart` callback, called at the start of the init process
 
-- Theme actions updated
-- Types definition
-- Docs
-- `Error boundary` for the whole app, with customizable fallback
+### 0.6.0
 
-# 0.2.0
+-   Configs as parameters (if not set, default standard predefined files will be used)
+-   Types updated
+-   Statically importing `modular-engine` instead of promise
 
-- Library restructured
-- Minor fixes
-- Clean up
-- Config files better handled
+### 0.5.0
 
-# 0.1.0
+-   Logic updates
+-   Better types definitions
+-   Unit tests
 
-- Library setup
+### 0.4.0
+
+-   Modular-engine updated
+-   Clean up
+-   Error `fallback` customizable through config.error field
+
+### 0.3.0
+
+-   Theme actions updated
+-   Types definition
+-   Docs
+-   `Error boundary` for the whole app, with customizable fallback
+
+### 0.2.0
+
+-   Library restructured
+-   Minor fixes
+-   Clean up
+-   Config files better handled
+
+### 0.1.0
+
+-   Library setup
