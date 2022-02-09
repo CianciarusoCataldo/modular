@@ -11,6 +11,8 @@
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/@cianciarusocataldo/modular?label=Snyk%20Vulnerabilities&style=for-the-badge&logo=snyk)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained&style=for-the-badge)
 
+---
+
 ## Status
 
 ### Continuous Integration
@@ -41,8 +43,13 @@
 
 * * *
 
-<br><br>
+<br>
+
 Setup and configure your web app with few steps
+
+<br>
+
+* * *
 
 ## Summary
 
@@ -56,8 +63,6 @@ Setup and configure your web app with few steps
 
 * * *
 
-<br>
-
 ## Installation
 
 If you want to use this library inside your project, just install it:
@@ -66,9 +71,9 @@ If you want to use this library inside your project, just install it:
 npm i @cianciarusocataldo/modular
 ```
 
-* * *
-
 <br>
+
+* * *
 
 ## Tests
 
@@ -96,19 +101,21 @@ This lib is analyzed and tested with:
 
 * * *
 
-<br>
-
 ## Included libraries
 
 -   [Modular-ui](https://github.com/CianciarusoCataldo/modular-ui) - for UI components
 -   [Modular-engine](https://github.com/CianciarusoCataldo/modular-engine) - for enhanced global state, app localization and routes history
 -   Modular is written entirely with [Typescript](https://www.typescriptlang.org/)
 
+<br>
+
 * * *
 
 ## Authors
 
 -   [**Cataldo Cianciaruso**](https://github.com/CianciarusoCataldo)
+
+<br>
 
 * * *
 
