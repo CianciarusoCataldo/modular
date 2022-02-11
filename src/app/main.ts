@@ -3,6 +3,7 @@ import {
   initStore,
   initi18n,
 } from "@cianciarusocataldo/modular-engine";
+
 import { AppConfig, Theme } from "./types";
 
 /*istanbul ignore next */
@@ -30,6 +31,25 @@ const defaultEngineConfig = {
 
 const defaultAppConfig = {};
 
+/**
+ * Init the modular main application, with given configs. If some config is not given, will look for default config files:
+ * - `app.config.js` for app setup
+ * - `engine.config.js` for engine (state and localization) setup
+ * - `theme.config.json` for app custom theme
+ *
+ * If these files are not present in the same folder where this function is called, default internal configs will be used instead.
+ * Use the `onComplete` callback to render the final app component.
+ *
+ * @param {AppConfig} appConfig
+ * @param {Config} engine engine config (to setup internal redux store and i18n system)
+ * @param {(App: JSX.Element) => any} onComplete custom callback called at the end of the init process. Receives as input parameter the final application component, already configured
+ * @param {()=>any} onStart custom callback called at the start of the init process, before any other action.
+ * @param {Theme} theme app custom theme
+ *
+ * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
+ *
+ * @copyright 2022 Cataldo Cianciaruso
+ */
 export const initApplication = ({
   appConfig: inputAppConfig,
   engine: inputEngineConfig,
