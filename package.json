@@ -1,7 +1,7 @@
 {
   "name": "@cianciarusocataldo/modular",
   "description": "Setup and configure your web app with few steps",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "main": "dist/index.js",
   "module": "dist",
   "typings": "dist/index.d.ts",
@@ -16,16 +16,16 @@
   },
   "homepage": "https://github.com/CianciarusoCataldo/modular#readme",
   "peerDependencies": {
-    "@cianciarusocataldo/modular-engine": "^2.2.0",
-    "@cianciarusocataldo/modular-ui": "^4.0.1",
+    "@cianciarusocataldo/modular-engine": "^2.2.2",
+    "@cianciarusocataldo/modular-ui": "^4.0.2",
     "react": ">=16.x"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.7",
-    "@cianciarusocataldo/modular-engine": "^2.2.0",
-    "@cianciarusocataldo/modular-ui": "^4.0.1",
+    "@cianciarusocataldo/modular-engine": "^2.2.2",
+    "@cianciarusocataldo/modular-ui": "^4.0.2",
     "@types/enzyme": "^3.10.11",
     "@types/history": "^4.7.8",
     "@types/jest": "^27.4.0",
