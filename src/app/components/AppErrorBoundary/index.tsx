@@ -2,6 +2,14 @@ import React from "react";
 
 import { Button } from "@cianciarusocataldo/modular-ui";
 
+/** Modular error boundary, wrap all App components to intercept most of the errors thrown
+ *
+ * @param {() => JSX.Element} fallback custom fallback displayed when an error is catched
+ *
+ * @author Cataldo Cianciaruso <https://github.com/CianciarusoCataldo>
+ *
+ * @copyright 2022 Cataldo Cianciaruso
+ */
 class ErrorBoundary extends React.Component<
   { fallback?: () => JSX.Element },
   { hasError: boolean }

@@ -32,7 +32,7 @@ const defaultEngineConfig = {
 const defaultAppConfig = {};
 
 /**
- * Init the modular main application, with given configs. If some config is not given, will look for default config files:
+ * Init the modular main application, with given configs. If some configs are not given, will look for default config files:
  * - `app.config.js` for app setup
  * - `engine.config.js` for engine (state and localization) setup
  * - `theme.config.json` for app custom theme
