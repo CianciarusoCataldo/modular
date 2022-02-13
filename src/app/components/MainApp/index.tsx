@@ -55,10 +55,7 @@ const MainApp = ({
           {engine.ui && <ToastContainer />}
           {engine.modal && <AppModal modals={config.modals || {}} />}
           {engine.ui && config.drawer && (
-            <AppDrawer
-              logo={DrawerLogo && <DrawerLogo />}
-              elements={config.drawer.elements && config.drawer.elements}
-            >
+            <AppDrawer logo={DrawerLogo && <DrawerLogo />}>
               {DrawerContent && <DrawerContent />}
             </AppDrawer>
           )}

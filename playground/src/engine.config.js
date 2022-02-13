@@ -11,7 +11,9 @@ const engineConfig = {
   router: {
     basename: "/modular-app",
     homePage: "/",
-    pages: {},
+    pages: {
+      TestPage: "/test/page",
+    },
   },
   i18n: {
     fallbackLanguage: "en",

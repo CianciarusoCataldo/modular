@@ -1,5 +1,5 @@
 import { RouteProps } from "react-router-dom";
-import { DrawerElement } from "@cianciarusocataldo/modular-ui";
+import { Config } from "@cianciarusocataldo/modular-engine";
 
 export interface ThemeField {
   height?: string;
@@ -36,8 +36,6 @@ export type AppConfig = {
 
     /** App Drawer custom logo, displayed at the top of the Drawer */
     logo: () => JSX.Element;
-
-    elements: DrawerElement[];
   };
 
   /** Custom modals object. Keys are the modals types, values are component to render inside the modal, when opened */
@@ -51,4 +49,19 @@ export type AppConfig = {
 
   /** Custom component, rendered below the router, before the footer */
   content?: () => JSX.Element;
+
+  /**  */
+  useQueryParams?: boolean;
 };
+
+export type Init = (props: {
+  appConfig?: AppConfig;
+  engine?: Config;
+
+  /** Callback called at the end of the init process */
+  onComplete?: (App: JSX.Element) => any;
+
+  /** Callback called before any init operation */
+  onStart?: () => any;
+  theme?: Theme;
+}) => Promise<{ App: JSX.Element }>;

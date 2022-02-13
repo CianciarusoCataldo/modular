@@ -23,6 +23,9 @@
 
 -   `modular-ui` dependency updated
 -   `modular-engine` dependency updated
+-   types updated
+-   `initApplication` now returns a Promise, to concat it with a `then`
+-   New url query string management (can be disabled inside app.config file/object)
 
 <br>
 

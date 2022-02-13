@@ -2,9 +2,10 @@ import {
   Config,
   initStore,
   initi18n,
+  requestRoute,
 } from "@cianciarusocataldo/modular-engine";
 
-import { AppConfig, Theme } from "./types";
+import { AppConfig, Init, Theme } from "./types";
 
 /*istanbul ignore next */
 const printDev = (output: any) => {
@@ -50,18 +51,12 @@ const defaultAppConfig = {};
  *
  * @copyright 2022 Cataldo Cianciaruso
  */
-export const initApplication = ({
+export const initApplication: Init = ({
   appConfig: inputAppConfig,
   engine: inputEngineConfig,
   onComplete,
   onStart,
   theme: inputTheme,
-}: {
-  appConfig?: AppConfig;
-  engine?: Config;
-  onComplete: (App: JSX.Element) => any;
-  onStart?: () => any;
-  theme?: Theme;
 }) => {
   let theme: Theme = defaultTheme;
   let config: AppConfig = defaultAppConfig;
@@ -100,7 +95,9 @@ export const initApplication = ({
     config: engineConfig,
   });
 
-  import("./components/MainApp").then(({ default: MainApp }) => {
+  let initialRoute: string | null = null;
+
+  return import("./components/MainApp").then(({ default: MainApp }) => {
     if (inputAppConfig) {
       config = inputAppConfig;
     } else {
@@ -113,14 +110,37 @@ export const initApplication = ({
       }
     }
 
-    onComplete(
-      MainApp({
-        store,
-        history,
-        config,
-        engine: engineConfig.redux,
-        theme,
-      })
-    );
+    const App = MainApp({
+      store,
+      history,
+      config,
+      engine: engineConfig.redux,
+      theme,
+    });
+
+    onComplete && onComplete(App);
+
+    /*istanbul ignore next */
+    if (config.useQueryParams) {
+      if (window.location.search) {
+        const urlParams = new URLSearchParams(window.location.search);
+        initialRoute = urlParams.get("to");
+
+        if (
+          initialRoute &&
+          Object.values(store.getState().config.router.pages).includes(
+            initialRoute
+          )
+        ) {
+          store.dispatch(
+            requestRoute(store.getState().config.router.basename + initialRoute)
+          );
+        }
+      }
+    }
+
+    return {
+      App,
+    };
   });
 };

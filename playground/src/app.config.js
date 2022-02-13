@@ -16,6 +16,7 @@ const appConfig = {
   ),
   header: HeaderContent,
   footer: FooterContent,
+  useQueryParams: true,
   drawer: {
     content: DrawerContent,
     logo: DrawerLogo,
