@@ -73,6 +73,8 @@
     "build": "rollup -c ./config/rollup.build.config.js",
     "analyze": "rollup -c ./config/rollup.analyze.config.js",
     "check-types": "tsc",
+    "predeploy": "npm run build-playground",
+    "deploy": "gh-pages -d playground/build",
     "start": "cd playground && npm run start",
     "init": "npm i && cd playground && npm i",
     "build-playground": "cd playground && npm run build",
