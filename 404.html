@@ -8,9 +8,15 @@
       content="0; URL='https://cianciarusocataldo.github.io/modular'"
     /> -->
     <script>
-      const pathname = window.location.href;
+      let pathname = window.location.href.replace(
+        "https://cianciarusocataldo.github.io/modular",
+        ""
+      );
+      if (!pathname.startsWith("/")) {
+        pathname = "/" + pathname;
+      }
       window.location.href =
-        "https://cianciarusocataldo.github.io/modular?test=" + pathname;
+        "https://cianciarusocataldo.github.io/modular?to=" + pathname;
     </script>
   </head>
   <body></body>
