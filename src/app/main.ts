@@ -135,6 +135,13 @@ export const initApplication: Init = ({
           store.dispatch(
             requestRoute(store.getState().config.router.basename + initialRoute)
           );
+        } else {
+          store.dispatch(
+            requestRoute(
+              store.getState().config.router.basename +
+                store.getState().config.router.homePage
+            )
+          );
         }
       }
     }
