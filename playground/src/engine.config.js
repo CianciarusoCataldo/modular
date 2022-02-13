@@ -1,5 +1,5 @@
 const engineConfig = {
-  appName: "Modular-app",
+  appName: "Modular",
   redux: {
     modal: true,
     ui: true,
@@ -9,7 +9,7 @@ const engineConfig = {
     darkMode: true,
   },
   router: {
-    basename: "/modular-app",
+    basename: "/modular",
     homePage: "/",
     pages: {
       TestPage: "/test/page",
@@ -18,7 +18,7 @@ const engineConfig = {
   i18n: {
     fallbackLanguage: "en",
     supportedLanguages: ["en", "it", "es", "fr", "de"],
-    loadPath: "/modular-app/locales/{{lng}}/{{ns}}.json",
+    loadPath: "/modular/locales/{{lng}}/{{ns}}.json",
     pagesNamespace: "page-titles",
     modalsNamespace: "modal-titles",
   },

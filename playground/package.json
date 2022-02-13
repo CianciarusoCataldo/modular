@@ -2,7 +2,7 @@
   "name": "modular-app",
   "version": "4.0.0",
   "private": true,
-  "homepage": "https://cianciarusocataldo.github.io/modular-app",
+  "homepage": "https://cianciarusocataldo.github.io/modular",
   "dependencies": {
     "@cianciarusocataldo/modular-engine": "^2.2.2",
     "@cianciarusocataldo/modular-ui": "^4.0.2",
