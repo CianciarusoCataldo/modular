@@ -59,6 +59,7 @@ const runTest = () => {
         theme: {
           ...defaultTheme,
           router: {},
+          body: { dark: "", default: undefined },
           ui: {
             dark: { background: "dark" },
             default: { background: "light" },
