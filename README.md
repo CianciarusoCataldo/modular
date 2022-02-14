@@ -4,7 +4,7 @@
 
 
 
-# modular<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153834320-27aa1f70-fee2-411a-b90a-ebdee3b4a164.png" width="50px"/>
+# modular<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153834320-27aa1f70-fee2-411a-b90a-ebdee3b4a164.png" width="40"/>
 
 
 
