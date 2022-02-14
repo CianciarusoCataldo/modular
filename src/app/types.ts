@@ -3,8 +3,8 @@ import { Config } from "@cianciarusocataldo/modular-engine";
 import { CSSProperties } from "react";
 
 interface CustomizableProperties {
-  background: string;
-  text: string;
+  background?: string;
+  text?: string;
 }
 
 export interface ThemeField {
@@ -28,7 +28,7 @@ export type Theme = {
   drawer: ThemeField;
 
   /** Body custom attributes */
-  body: {
+  body?: {
     default: string;
     dark: string;
   };

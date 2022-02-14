@@ -2,17 +2,5 @@
   "header": {},
   "router": {},
   "footer": {},
-  "drawer": {},
-  "body": {
-    "default": "linear-gradient(to right, #f0f3fa, #f4f6fa)",
-    "dark": "linear-gradient(to right, #3c4a5f, #273141)"
-  },
-  "ui": {
-    "dark": {
-      "background": "linear-gradient(317deg, rgba(2, 0, 36, 1) 0%, rgb(22, 17, 51) 71%, rgba(27, 17, 55, 1) 100%);"
-    },
-    "default": {
-      "background": "linear-gradient(317deg, rgb(251, 251, 251) 0%, rgb(238, 238, 238) 71%, rgb(246, 246, 246) 100%);"
-    }
-  }
+  "drawer": {}
 }

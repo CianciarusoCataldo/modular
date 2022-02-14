@@ -39,7 +39,11 @@ const runTest = () => {
       initApplication({
         engine: { redux: defaultEngineConfig.redux },
         appConfig: appConfig,
-        theme: { ...defaultTheme, router: { override: {} } },
+        theme: {
+          ...defaultTheme,
+          router: { override: {} },
+          body: undefined,
+        },
         onComplete: (App) => {
           const wrapper = mount(App);
           expect(wrapper);
@@ -50,9 +54,16 @@ const runTest = () => {
     test("onStart callback is called at the start of the init process", () => {
       const onStartStub = jest.fn();
       initApplication({
-        engine: { redux: defaultEngineConfig.redux },
+        engine: { redux: { ...defaultEngineConfig.redux, darkMode: true } },
         appConfig: appConfig,
-        theme: { ...defaultTheme, router: {} },
+        theme: {
+          ...defaultTheme,
+          router: {},
+          ui: {
+            dark: { background: "dark" },
+            default: { background: "light" },
+          },
+        },
         onStart: () => onStartStub(),
         onComplete: (App) => {
           expect(onStartStub).toBeCalled;

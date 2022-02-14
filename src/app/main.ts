@@ -72,14 +72,16 @@ export const initApplication: Init = ({
     }
   }
 
+  const bodyTheme = theme.body || defaultTheme.body;
+
   let customStyle: string = `
   * {
     ${uiStyle}
   }
 
   body.light { background: ${
-    theme.body.default || defaultTheme.body.default
-  }; } body.dark { background: ${theme.body.dark || defaultTheme.body.dark}; }
+    bodyTheme.default || defaultTheme.body.default
+  }; } body.dark { background: ${bodyTheme.dark || defaultTheme.body.dark}; }
   /* Works on Firefox */
 * {
   scrollbar-width: thin;
