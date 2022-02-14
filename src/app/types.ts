@@ -2,7 +2,7 @@ import { RouteProps } from "react-router-dom";
 import { Config } from "@cianciarusocataldo/modular-engine";
 import { CSSProperties } from "react";
 
-interface CustomizableProperties {
+export interface CustomizableProperties {
   background?: string;
   text?: string;
 }
