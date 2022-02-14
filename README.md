@@ -1,12 +1,8 @@
 <div align="center">
-<img width="640px" height="380px" alt="" src="https://user-images.githubusercontent.com/47371276/152907365-aa0d89f0-9998-423d-9cf3-72043ebd7dff.png" />
+<img width="640px" height="340px" alt="" src="https://user-images.githubusercontent.com/47371276/152907365-aa0d89f0-9998-423d-9cf3-72043ebd7dff.png" />
 </div>
 
-
-
-# modular<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153834320-27aa1f70-fee2-411a-b90a-ebdee3b4a164.png" width="40"/>
-
-
+# modular<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153878422-16c9d20f-d0f0-4940-8b67-3366094b66f7.png" width="40"/>
 
 ![NPM](https://img.shields.io/npm/l/@cianciarusocataldo/modular?label=License&style=for-the-badge) 
 ![npm (scoped)](https://img.shields.io/npm/v/@cianciarusocataldo/modular?color=orange%20&label=Latest%20version&style=for-the-badge) 
@@ -15,7 +11,9 @@
 
 * * *
 
-## Status
+<br>
+
+## Status<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153876497-124aa299-63d9-46bf-a090-6d53a7417f4d.png" width="30"/>
 
 ### Security
 
@@ -60,7 +58,8 @@ Setup and configure your web app with few steps
 
 * * *
 
-## Summary
+
+## Summary<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153879131-3e4416a4-b3fd-4208-beee-ccf672345bcc.png" width="30"/>
 
 -   [Installation](#installation)
 -   [Tests](#tests)
