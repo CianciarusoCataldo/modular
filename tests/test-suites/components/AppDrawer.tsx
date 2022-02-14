@@ -17,7 +17,7 @@ const AppDrawerTest = (store: Store) => {
       let wrapper = mount(
         <Provider store={store}>
           <div className="app-container">
-            <AppDrawer elements={[]} children={<div />} />
+            <AppDrawer theme={{}} children={<div />} />
           </div>
         </Provider>
       );
@@ -28,7 +28,7 @@ const AppDrawerTest = (store: Store) => {
       let wrapper = mount(
         <Provider store={store}>
           <div className="app-container">
-            <AppDrawer elements={[]} children={<div />} />
+            <AppDrawer theme={{}} children={<div />} />
           </div>
         </Provider>
       );

@@ -14,12 +14,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-import {
-  Button,
-  Divider,
-  DrawerElement,
-  Link,
-} from "@cianciarusocataldo/modular-ui";
+import { Button, Divider, Link } from "@cianciarusocataldo/modular-ui";
 
 export const DrawerLogo = () => {
   const APP_NAME = useSelector(getAppName);
@@ -79,5 +74,3 @@ export const DrawerContent = () => {
     </div>
   );
 };
-
-export const DrawerElements: DrawerElement[] = [];

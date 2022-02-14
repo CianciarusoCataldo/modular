@@ -2,6 +2,7 @@
 
 ## Versions
 
+-   [0.9.0](#090)
 -   [0.8.0](#080)
 -   [0.7.0](#070)
 -   [0.6.0](#070)
@@ -16,6 +17,15 @@
 * * *
 
 ## Changes
+
+<br>
+
+### 0.9.0
+
+-   Drawer, footer, header and router better styled
+-   Refactoring
+-   Theme config restructured
+-   Tests updates
 
 <br>
 

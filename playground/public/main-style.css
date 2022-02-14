@@ -44,3 +44,7 @@ body.dark {
 body.light {
   background: linear-gradient(to right, #eaebec, #cccdcf);
 }
+
+.test-header{
+  background-image: linear-gradient(to right, #ff9100, #cccdcf);
+}

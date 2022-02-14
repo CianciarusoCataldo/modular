@@ -1,9 +1,11 @@
 import { RouteProps } from "react-router-dom";
 import { Config } from "@cianciarusocataldo/modular-engine";
+import { CSSProperties } from "react";
 
 export interface ThemeField {
-  height?: string;
   className?: string;
+  style?: CSSProperties;
+  override?: CSSProperties;
 }
 
 /** App custom theme, to customize some part of final app UI */
@@ -16,6 +18,9 @@ export type Theme = {
 
   /** Router custom attributes */
   router: ThemeField;
+
+  /** Drawer custom attributes */
+  drawer: ThemeField;
 } & Record<string, any>;
 
 /** Modular app config, to control app behaviour */

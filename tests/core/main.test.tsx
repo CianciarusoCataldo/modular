@@ -4,7 +4,7 @@ import PKG from "../../package.json";
 import initApplicationTest from "../test-suites/init";
 
 //Tests
-import AppContainerTest from "../test-suites/components/AppContainer";
+import AppContainerTest from "../test-suites/components/ThemedContainer";
 import AppModalTest from "../test-suites/components/AppModal";
 import AppDrawerTest from "../test-suites/components/AppDrawer";
 import MainAppTests from "../test-suites/components/MainApp";

@@ -3,28 +3,12 @@ import React from "react";
 import { mount } from "enzyme";
 
 import { initApplication } from "../../src";
+import {
+  defaultEngineConfig,
+  defaultTheme,
+} from "../../src/app/constants/default-configs";
 
 const runTest = () => {
-  const defaultTheme = {
-    header: {
-      height: "20%",
-    },
-    footer: {
-      height: "10%",
-    },
-    router: {
-      height: "70%",
-    },
-  };
-
-  const defaultEngineConfig = {
-    ui: true,
-    modal: true,
-    epics: [],
-    reducers: {},
-    preload: {},
-  };
-
   const appConfig = {
     content: () => <div />,
     modals: {},
@@ -53,9 +37,9 @@ const runTest = () => {
       process.env.NODE_ENV === "test";
 
       initApplication({
-        engine: { redux: defaultEngineConfig },
+        engine: { redux: defaultEngineConfig.redux },
         appConfig: appConfig,
-        theme: defaultTheme,
+        theme: { ...defaultTheme, router: { override: {} } },
         onComplete: (App) => {
           const wrapper = mount(App);
           expect(wrapper);
@@ -66,9 +50,9 @@ const runTest = () => {
     test("onStart callback is called at the start of the init process", () => {
       const onStartStub = jest.fn();
       initApplication({
-        engine: { redux: defaultEngineConfig },
+        engine: { redux: defaultEngineConfig.redux },
         appConfig: appConfig,
-        theme: defaultTheme,
+        theme: { ...defaultTheme, router: {} },
         onStart: () => onStartStub(),
         onComplete: (App) => {
           expect(onStartStub).toBeCalled;

@@ -5,27 +5,12 @@ import { History } from "history";
 
 import { mount } from "enzyme";
 
+import {
+  defaultTheme,
+  defaultEngineConfig,
+} from "../../../src/app/constants/default-configs";
+
 import MainApp from "../../../src/app/components/MainApp";
-
-const defaultTheme = {
-  header: {
-    height: "20%",
-  },
-  footer: {
-    height: "10%",
-  },
-  router: {
-    height: "70%",
-  },
-};
-
-const defaultEngineConfig = {
-  ui: true,
-  modal: true,
-  epics: [],
-  reducers: {},
-  preload: {},
-};
 
 const appConfig = {
   pagesRendering: () => React.lazy(() => import("../constants/TestComponent")),
@@ -41,7 +26,6 @@ const appConfig = {
   drawer: {
     content: () => <div />,
     logo: () => <div />,
-    elements: [],
   },
 };
 
@@ -62,8 +46,8 @@ const MainAppTests = (store: Store, history: History) => {
     test("with defined config params", () => {
       const testProps = {
         config: appConfig,
-        engine: defaultEngineConfig,
-        theme: defaultTheme,
+        engine: defaultEngineConfig.redux,
+        theme: { ...defaultTheme, router: {} },
         store,
         history,
       };

@@ -7,17 +7,16 @@ import { useSelector } from "react-redux";
 import { getHomePage, getPages } from "@cianciarusocataldo/modular-engine";
 
 import { Redirect, Route, RouteProps, Router, Switch } from "react-router-dom";
+import { ThemeField } from "../../types";
 
 const AppRouter = ({
   history,
   renderCallback,
-  style,
-  className,
+  theme,
 }: {
   history: History;
   renderCallback: (route: string) => RouteProps["component"];
-  style?: React.CSSProperties;
-  className?: string;
+  theme?: ThemeField;
 }) => {
   const PAGES = useSelector(getPages);
   const HOME = useSelector(getHomePage);
@@ -25,9 +24,13 @@ const AppRouter = ({
     ...PAGES,
     HOME_PAGE: HOME,
   };
+  const routerStyle = theme.override || theme.style;
 
   return (
-    <div style={style} className={className}>
+    <div
+      style={{ ...routerStyle, width: "100%", overflow: "auto" }}
+      className={theme.className}
+    >
       <Router history={history}>
         <Switch>
           {Object.keys(ALL_PAGES).map((route) => {

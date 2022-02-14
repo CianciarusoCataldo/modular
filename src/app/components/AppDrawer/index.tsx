@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -7,16 +7,17 @@ import {
   isDrawerOpen,
 } from "@cianciarusocataldo/modular-engine";
 
-import { Drawer, DrawerElement } from "@cianciarusocataldo/modular-ui";
+import { Drawer } from "@cianciarusocataldo/modular-ui";
+import { ThemeField } from "../../types";
 
 const AppDrawer = ({
   logo,
   children,
-  elements,
+  theme,
 }: {
   logo?: JSX.Element;
+  theme: ThemeField;
   children?: JSX.Element;
-  elements?: DrawerElement[];
 }) => {
   const dispatch = useDispatch();
   const isDrawerShowing = useSelector(isDrawerOpen);
@@ -47,12 +48,13 @@ const AppDrawer = ({
 
   return (
     <DrawerComponent
+      className={theme.className}
       logo={logo}
       hide={!isDrawerShowing}
       onClose={() => {
         dispatch(closeDrawer());
       }}
-      elements={elements}
+      style={theme.style}
     >
       {children}
     </DrawerComponent>

@@ -9,6 +9,8 @@ import { History } from "history";
 import { Store } from "@reduxjs/toolkit";
 
 import ErrorBoundary from "../AppErrorBoundary";
+import { parseThemeField } from "../../utils";
+import { defaultTheme } from "../../constants/default-configs";
 
 /**
  * Modular main app, rendered at the end of the init process.
@@ -42,7 +44,7 @@ const MainApp = ({
   const DrawerContent = config.drawer?.content;
   const DrawerLogo = config.drawer?.logo;
   const Preloader = config.preloader;
-  const AppContainer = React.lazy(() => import("../AppContainer"));
+  const ThemedContainer = React.lazy(() => import("../ThemedContainer"));
   const AppDrawer = React.lazy(() => import("../AppDrawer"));
   const AppModal = React.lazy(() => import("../AppModal"));
   const AppRouter = React.lazy(() => import("../AppRouter"));
@@ -55,7 +57,10 @@ const MainApp = ({
           {engine.ui && <ToastContainer />}
           {engine.modal && <AppModal modals={config.modals || {}} />}
           {engine.ui && config.drawer && (
-            <AppDrawer logo={DrawerLogo && <DrawerLogo />}>
+            <AppDrawer
+              theme={parseThemeField(theme.drawer, defaultTheme.drawer)}
+              logo={DrawerLogo && <DrawerLogo />}
+            >
               {DrawerContent && <DrawerContent />}
             </AppDrawer>
           )}
@@ -70,45 +75,38 @@ const MainApp = ({
             }}
           >
             {HeaderContent && (
-              <AppContainer
+              <ThemedContainer
+                theme={parseThemeField(theme.header, defaultTheme.header)}
                 wrapper="header"
-                className={theme.header.className}
                 style={{
                   width: "100%",
                   overflow: "hidden",
-                  height: theme.header.height,
                 }}
               >
                 <HeaderContent />
-              </AppContainer>
+              </ThemedContainer>
             )}
             {config.pagesRendering && (
               <AppRouter
                 renderCallback={config.pagesRendering}
                 history={history}
-                className={theme.router.className}
-                style={{
-                  height: theme.router.height,
-                  width: "100%",
-                  overflow: "auto",
-                }}
+                theme={parseThemeField(theme.router, defaultTheme.router)}
               />
             )}
             {CustomContent && <CustomContent />}
             {FooterContent && (
-              <AppContainer
+              <ThemedContainer
+                theme={parseThemeField(theme.footer, defaultTheme.footer)}
                 wrapper="footer"
-                className={theme.router.className}
                 style={{
                   bottom: "0px",
                   position: "absolute",
                   overflow: "hidden",
                   width: "100%",
-                  height: theme.footer.height,
                 }}
               >
                 <FooterContent />
-              </AppContainer>
+              </ThemedContainer>
             )}
           </div>
         </ErrorBoundary>

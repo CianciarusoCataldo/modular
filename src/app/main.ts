@@ -5,32 +5,15 @@ import {
   requestRoute,
 } from "@cianciarusocataldo/modular-engine";
 
+import {
+  defaultTheme,
+  defaultAppConfig,
+  defaultEngineConfig,
+} from "./constants/default-configs";
+
 import { AppConfig, Init, Theme } from "./types";
 
-/*istanbul ignore next */
-const printDev = (output: any) => {
-  if (process.env.NODE_ENV === "development") {
-    console.log(output);
-  }
-};
-
-const defaultTheme = {
-  header: {
-    height: "20%",
-  },
-  footer: {
-    height: "10%",
-  },
-  router: {
-    height: "70%",
-  },
-};
-
-const defaultEngineConfig = {
-  redux: { ui: true, modal: true, epics: [], reducers: {}, preload: {} },
-};
-
-const defaultAppConfig = {};
+import { addStyle, printDev } from "./utils";
 
 /**
  * Init the modular main application, with given configs. If some configs are not given, will look for default config files:
@@ -76,6 +59,10 @@ export const initApplication: Init = ({
       theme = defaultTheme;
     }
   }
+
+  let customStyle: string = "";
+
+  addStyle(customStyle);
 
   if (inputEngineConfig) {
     engineConfig = inputEngineConfig;

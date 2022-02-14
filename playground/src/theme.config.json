@@ -1,14 +1,6 @@
 {
-  "header": {
-    "height": "20%",
-    "className": ""
-  },
-  "router": {
-    "height": "70%",
-    "className": ""
-  },
-  "footer": {
-    "height": "10%",
-    "className": ""
-  }
+  "header": {},
+  "router": {},
+  "footer": {},
+  "drawer": {}
 }

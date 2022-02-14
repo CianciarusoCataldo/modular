@@ -5,14 +5,14 @@ import { Store } from "redux";
 import { Provider } from "react-redux";
 import { mount } from "enzyme";
 
-import AppContainer from "../../../src/app/components/AppContainer";
+import AppContainer from "../../../src/app/components/ThemedContainer";
 
 const AppContainerTest = (store: Store) => {
-  describe("\n     AppContainer\n", () => {
+  describe("\n     ThemedContainer\n", () => {
     test("renders correctly", () => {
       const wrapper = mount(
         <Provider store={store}>
-          <AppContainer>
+          <AppContainer theme={{}}>
             <div />
           </AppContainer>
         </Provider>
