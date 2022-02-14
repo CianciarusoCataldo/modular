@@ -1,7 +1,7 @@
 {
   "name": "@cianciarusocataldo/modular",
   "description": "Setup and configure your web app with few steps",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "main": "dist/index.js",
   "module": "dist",
   "typings": "dist/index.d.ts",

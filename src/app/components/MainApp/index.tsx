@@ -99,8 +99,6 @@ const MainApp = ({
                 theme={parseThemeField(theme.footer, defaultTheme.footer)}
                 wrapper="footer"
                 style={{
-                  bottom: "0px",
-                  position: "absolute",
                   overflow: "hidden",
                   width: "100%",
                 }}
