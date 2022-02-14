@@ -10,6 +10,7 @@ import {
   defaultAppConfig,
   defaultEngineConfig,
 } from "./constants/default-configs";
+import { uiProperties } from "./constants/ui-properties";
 
 import { AppConfig, Init, Theme } from "./types";
 
@@ -60,7 +61,46 @@ export const initApplication: Init = ({
     }
   }
 
-  let customStyle: string = "";
+  const uiTheme = theme.ui || {};
+  let uiStyle = "";
+  if (uiTheme.dark) {
+    if (uiTheme.default.background) {
+      uiStyle += `${uiProperties.default.background}: ${uiTheme.default.background}; `;
+    }
+    if (uiTheme.dark.background) {
+      uiStyle += `${uiProperties.dark.background}: ${uiTheme.dark.background}; `;
+    }
+  }
+
+  let customStyle: string = `
+  * {
+    ${uiStyle}
+  }
+
+  body.light { background: ${
+    theme.body.default || defaultTheme.body.default
+  }; } body.dark { background: ${theme.body.dark || defaultTheme.body.dark}; }
+  /* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #2d3748, #1d232e);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 20px;
+  border: 3px solid #c0c0c0;
+}
+`;
 
   addStyle(customStyle);
 
@@ -75,6 +115,10 @@ export const initApplication: Init = ({
       engineConfig = defaultEngineConfig;
     }
   }
+
+  window.document.body.classList.add(
+    engineConfig.redux.darkMode ? "dark" : "light"
+  );
 
   initi18n(engineConfig);
 
