@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://cianciarusocataldo.github.io/modular/static/css/main.7e58ef5e.css",
-    "main.js": "https://cianciarusocataldo.github.io/modular/static/js/main.13445d43.js",
-    "static/js/595.4b129a56.chunk.js": "https://cianciarusocataldo.github.io/modular/static/js/595.4b129a56.chunk.js",
+    "main.js": "https://cianciarusocataldo.github.io/modular/static/js/main.f8e0986a.js",
+    "static/js/595.488341bd.chunk.js": "https://cianciarusocataldo.github.io/modular/static/js/595.488341bd.chunk.js",
     "static/js/637.9e98f707.chunk.js": "https://cianciarusocataldo.github.io/modular/static/js/637.9e98f707.chunk.js",
     "static/js/168.71a31751.chunk.js": "https://cianciarusocataldo.github.io/modular/static/js/168.71a31751.chunk.js",
     "static/js/218.3b2c1782.chunk.js": "https://cianciarusocataldo.github.io/modular/static/js/218.3b2c1782.chunk.js",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.7e58ef5e.css",
-    "static/js/main.13445d43.js"
+    "static/js/main.f8e0986a.js"
   ]
 }
