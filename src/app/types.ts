@@ -2,6 +2,11 @@ import { RouteProps } from "react-router-dom";
 import { Config } from "@cianciarusocataldo/modular-engine";
 import { CSSProperties } from "react";
 
+interface CustomizableProperties {
+  background?: string;
+  text?: string;
+}
+
 export interface ThemeField {
   className?: string;
   style?: CSSProperties;
@@ -21,6 +26,17 @@ export type Theme = {
 
   /** Drawer custom attributes */
   drawer: ThemeField;
+
+  /** Body custom attributes */
+  body?: {
+    default: string;
+    dark: string;
+  };
+
+  ui?: {
+    default?: CustomizableProperties;
+    dark?: CustomizableProperties;
+  };
 } & Record<string, any>;
 
 /** Modular app config, to control app behaviour */

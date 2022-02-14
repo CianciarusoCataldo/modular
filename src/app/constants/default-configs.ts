@@ -1,4 +1,10 @@
-export const defaultTheme = {
+import { Theme } from "../types";
+
+export const defaultTheme: Theme = {
+  body: {
+    dark: "linear-gradient(to right, #3c4a5f, #4d5f7d)",
+    default: "linear-gradient(to right, #eaebec, #cccdcf)",
+  },
   header: {
     style: {
       height: "20%",

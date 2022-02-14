@@ -21,9 +21,10 @@ import("modular-preview").then(({ initApplication }) => {
       engine,
       onComplete: (App) => {
         import("react-dom").then(({ render }) => {
-          render(App, document.getElementById("root"));
-          let Preloader = document.getElementById("preloader");
-          if (Preloader) Preloader.style.visibility = "hidden";
+          render(App, document.getElementById("root"), () => {
+            let Preloader = document.getElementById("preloader");
+            if (Preloader) Preloader.style.visibility = "hidden";
+          });
         });
       },
     });
