@@ -62,7 +62,7 @@ Setup and configure your web app with few steps
 ## Summary<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153879131-3e4416a4-b3fd-4208-beee-ccf672345bcc.png" width="30"/>
 
 -   [Getting started](#getting-started)
--      [Installation](#installation)
+    -   [Installation](#installation)
 -   [Tests](#tests)
 -   [Included libraries](#included-libraries)
 -   [Authors](#authors)
