@@ -61,7 +61,8 @@ Setup and configure your web app with few steps
 
 ## Summary<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153879131-3e4416a4-b3fd-4208-beee-ccf672345bcc.png" width="30"/>
 
--   [Installation](#installation)
+-   [Getting started](#getting-started)
+-      [Installation](#installation)
 -   [Tests](#tests)
 -   [Included libraries](#included-libraries)
 -   [Authors](#authors)
@@ -71,7 +72,9 @@ Setup and configure your web app with few steps
 
 * * *
 
-## Installation
+## Getting started<img src="https://user-images.githubusercontent.com/47371276/154059478-c044b278-5ef4-4036-8113-a18531e35194.svg" align="left" width="30" />
+
+### Installation
 
 If you want to use this library inside your project, just install it:
 
@@ -119,7 +122,7 @@ This lib is analyzed and tested with:
 
 * * *
 
-## Authors
+## Authors<img align="left" src="https://user-images.githubusercontent.com/47371276/154069439-eece1dc0-a82c-4322-95f4-cf2211226fcf.png" alt="" width="30" />
 
 -   [**Cataldo Cianciaruso**](https://github.com/CianciarusoCataldo)
 
@@ -127,6 +130,9 @@ This lib is analyzed and tested with:
 
 * * *
 
-## License
+
+                            
+
+## License<img align="left" src="https://user-images.githubusercontent.com/47371276/154152300-69b2ebbd-2461-49a7-b1c9-3570f4b51156.png" alt="" width="30" />
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
