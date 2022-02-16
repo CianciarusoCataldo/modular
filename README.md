@@ -5,7 +5,7 @@
 # modular<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153878422-16c9d20f-d0f0-4940-8b67-3366094b66f7.png" width="40"/>
 
 ![NPM](https://img.shields.io/npm/l/@cianciarusocataldo/modular?label=License&style=for-the-badge) 
-![npm (scoped)](https://img.shields.io/npm/v/@cianciarusocataldo/modular?color=orange%20&label=Latest%20version&style=for-the-badge) 
+![npm (scoped)](https://img.shields.io/npm/v/@cianciarusocataldo/modular?color=orange%20&label=Latest%20version&style=for-the-badge&logo=npm) 
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@cianciarusocataldo/modular?label=Package%20size&style=for-the-badge&logo=npm)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025?label=Maintained&style=for-the-badge)
 
@@ -13,7 +13,7 @@
 
 <br>
 
-## Status<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153876497-124aa299-63d9-46bf-a090-6d53a7417f4d.png" width="30"/>
+## Status<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/154184535-be975554-62a7-47ff-bda4-a0dea502b3a3.png" width="15"  height="30" />
 
 ### Security
 
@@ -86,7 +86,7 @@ npm i @cianciarusocataldo/modular
 
 * * *
 
-## Tests
+## Tests<img align="left" alt="" src="https://user-images.githubusercontent.com/47371276/153876497-124aa299-63d9-46bf-a090-6d53a7417f4d.png" width="30"/>
 
 Unit tests for every lib function are located inside `tests` folder. The test script is executed with pre-defined test command:
 
@@ -112,7 +112,7 @@ This lib is analyzed and tested with:
 
 * * *
 
-## Included libraries
+## Included libraries<img align="left" src="https://user-images.githubusercontent.com/47371276/154185729-f3a000f1-6a4b-459a-82eb-6923db3cdbdb.svg" with="30" height="30" />
 
 -   [Modular-ui](https://github.com/CianciarusoCataldo/modular-ui) - for UI components
 -   [Modular-engine](https://github.com/CianciarusoCataldo/modular-engine) - for enhanced global state, app localization and routes history
