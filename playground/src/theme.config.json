@@ -1,6 +1,20 @@
 {
-  "header": {},
-  "router": {},
-  "footer": {},
-  "drawer": {}
+  "header": {
+    "style": { "height": "19%", "borderBottom": "2px solid #c0c0c0" }
+  },
+  "router": { "style": { "height": "74%" } },
+  "footer": { "style": { "height": "7%", "borderTop": "2px solid #c0c0c0" } },
+  "drawer": {},
+  "body": {
+    "default": "linear-gradient(0deg, rgba(246,225,203,1) 29%, rgba(219,232,235,1) 100%)",
+    "dark": "linear-gradient(rgba(50,51,71,1) 48%, rgba(12,17,18,1) 100%)"
+  },
+  "ui": {
+    "dark": {
+      "background": "linear-gradient(108deg, rgba(74,59,53,1) 0%, rgba(33,35,61,1) 48%, rgba(12,17,18,1) 100%)"
+    },
+    "default": {
+      "background": "linear-gradient(317deg, rgb(251, 251, 251) 0%, rgb(238, 238, 238) 71%, rgb(246, 246, 246) 100%);"
+    }
+  }
 }

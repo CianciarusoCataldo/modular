@@ -1,12 +1,12 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: 'jit',
   content: ["./public/**/*.html", "./src/**/*.tsx", "./src/**/*.ts"],
   presets: [],
   theme: {
     screens: {
-      xsm: "425",
+      xxsm: "425px",
+      xsm: "512px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -14,6 +14,7 @@ module.exports = {
       "2xl": "1536px",
       "3xl": "1920px",
       "4xl": "2536px",
+      short: { raw: "(max-height: 800px)" },
     },
     colors: {
       transparent: "transparent",

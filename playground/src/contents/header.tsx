@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   BurgerIcon,
   DarkModeIcon,
+  DocsIcon,
   LANGUAGES_ICONS,
   LeftArrowIcon,
   LightModeIcon,
@@ -10,6 +11,7 @@ import {
 } from "assets/images";
 
 import { useCallback } from "react";
+import { useCommonTranslation } from "hooks/localization";
 
 import {
   changeLanguage,
@@ -37,10 +39,35 @@ const HeaderContent = () => {
   const language = useSelector(getLanguage);
   const LANGUAGES = Object.keys(LANGUAGES_ICONS);
 
+  const t = useCommonTranslation();
+
   return (
-    <div className="flex flex-col test-class">
-      <div className="flex flex-col items-end">
-        <div className="flex flex-row">
+    <div className="flex flex-col">
+      <div
+        className="mb-2 flex flex-col"
+        style={{
+          alignItems: "flex-end",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div className="flex flex-row m-auto pr-4">
+            <Link
+              to="https://cianciarusocataldo.github.io/modular/docs"
+              className="m-auto"
+              newTab
+            >
+              {DocsIcon}
+            </Link>
+            <div className="m-auto hidden xsm:block">
+              <Link
+                dark={dark}
+                to="https://cianciarusocataldo.github.io/modular/docs"
+                newTab
+              >
+                {t("docs")}
+              </Link>
+            </div>
+          </div>
           <Dropdown
             dark={false}
             value={LANGUAGES.findIndex((lang) => lang === language)}
@@ -74,7 +101,7 @@ const HeaderContent = () => {
             unstyled
             className="outline-none"
           >
-            <div className="p-1 sm:p-2 md:p-2 lg:p-2 xl:p-2">{BurgerIcon}</div>
+            <div className="p-1 sm:p-2 md:p-2">{BurgerIcon}</div>
           </Button>
         </div>
         <div className="my-auto">
@@ -96,9 +123,9 @@ const HeaderContent = () => {
             <Link
               dark={dark}
               newTab
-              to="https://github.com/CianciarusoCataldo/modular-app"
+              to="https://github.com/CianciarusoCataldo/modular"
             >
-              <p className="break-words text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-4xl 2xl:text-4xl 3xl:text-4xl 4xl:text-4xl">
+              <p className="break-words text-lg sm:text-xl md:text-2xl lg:text-4xl">
                 {APP_NAME}
               </p>
             </Link>
