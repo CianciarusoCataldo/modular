@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { LogoIcon } from "assets/images";
+import { DrawerLogoIcon } from "assets/images";
 
 import {
   closeDrawer,
@@ -21,15 +21,17 @@ export const DrawerLogo = () => {
   const LinkComponent = driveWithDarkMode(Link);
 
   return (
-    <div className="flex flex-row">
-      {LogoIcon}
-      <LinkComponent
-        to="https://github.com/CianciarusoCataldo/modular-app"
-        className="ml-1 text-lg break-all"
-        newTab
-      >
-        {APP_NAME}
-      </LinkComponent>
+    <div className="flex flex-row mr-3">
+      {DrawerLogoIcon}
+      <div className="flex flex-col align-middle items-center">
+        <LinkComponent
+          to="https://github.com/CianciarusoCataldo/modular"
+          className="my-auto ml-2 text-xl break-all"
+          newTab
+        >
+          {APP_NAME}
+        </LinkComponent>
+      </div>
     </div>
   );
 };

@@ -79,6 +79,7 @@ const HeaderContent = () => {
               name: lang,
               icon: LANGUAGES_ICONS[lang],
             }))}
+            className="h-12"
           />
           <Toggle
             onIcon={LightModeIcon}
