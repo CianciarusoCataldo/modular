@@ -1,7 +1,3 @@
 {
-  "atoms": "Atomi",
-  "molecules": "Molecole",
-  "organisms": "Organismi",
-  "component": "Componente {{componentName}}",
   "docs": "Documentazione"
 }
