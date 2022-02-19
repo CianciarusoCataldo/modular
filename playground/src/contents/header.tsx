@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -5,7 +7,6 @@ import {
   DarkModeIcon,
   DocsIcon,
   LANGUAGES_ICONS,
-  LeftArrowIcon,
   LightModeIcon,
   LogoIcon,
 } from "assets/images";
@@ -49,7 +50,7 @@ const HeaderContent = () => {
           alignItems: "flex-end",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className="fixed flex flex-row">
           <div className="flex flex-row m-auto pr-4">
             <Link
               to="https://cianciarusocataldo.github.io/modular/docs"
@@ -69,6 +70,7 @@ const HeaderContent = () => {
             </div>
           </div>
           <Dropdown
+            className="p-0"
             dark={false}
             value={LANGUAGES.findIndex((lang) => lang === language)}
             shadow
@@ -79,7 +81,6 @@ const HeaderContent = () => {
               name: lang,
               icon: LANGUAGES_ICONS[lang],
             }))}
-            className="h-12"
           />
           <Toggle
             onIcon={LightModeIcon}
@@ -92,7 +93,7 @@ const HeaderContent = () => {
           />
         </div>
       </div>
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-12">
         <div className="my-auto">
           <Button
             aria-label="drawer button"
@@ -115,7 +116,19 @@ const HeaderContent = () => {
             className="overflow-auto ml-1 outline-none"
             hide={hideHomeButton}
           >
-            {LeftArrowIcon}
+            <svg
+              className={classNames(
+                {
+                  "fill-[white]": dark,
+                  "fill-[black]": !dark,
+                },
+                "w-8 h-8 hover:fill-[#ff9f51] active:fill-[#fb7a10] xsm:w-12 xsm:h-12"
+              )}
+              viewBox="0 0 11 18"
+            >
+              <path d="M8.681.196l2.121 2.12-8.484 8.487-2.12-2.12z" />
+              <path d="M10.803 15.047l-2.121 2.121L.197 8.683l2.121-2.121z" />
+            </svg>
           </Button>
         </div>
         <div className="m-auto flex flex-row p-2">

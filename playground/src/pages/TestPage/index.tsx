@@ -1,3 +1,3 @@
-const TestPage = () => <div>Test page</div>;
+const TestPage = () => <div></div>;
 
 export default TestPage;

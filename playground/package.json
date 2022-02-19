@@ -5,7 +5,7 @@
   "homepage": "https://cianciarusocataldo.github.io/modular",
   "dependencies": {
     "@cianciarusocataldo/modular-engine": "^2.2.2",
-    "@cianciarusocataldo/modular-ui": "^4.0.2",
+    "@cianciarusocataldo/modular-ui": "^4.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
