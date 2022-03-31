@@ -7,6 +7,7 @@ const engineConfig = {
     preload: {},
     epics: [],
     darkMode: true,
+    titles: true,
   },
   router: {
     basename: "/modular",
