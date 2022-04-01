@@ -1,5 +1,7 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import { AppConfig, ThemeField } from "../../types";
 
 import {
   closeDrawer,
@@ -8,16 +10,17 @@ import {
 } from "@cianciarusocataldo/modular-engine";
 
 import { Drawer } from "@cianciarusocataldo/modular-ui";
-import { ThemeField } from "../../types";
 
 const AppDrawer = ({
   logo,
   children,
   theme,
+  position,
 }: {
-  logo?: JSX.Element;
+  logo?: () => JSX.Element;
   theme: ThemeField;
   children?: JSX.Element;
+  position?: AppConfig["drawer"]["position"];
 }) => {
   const dispatch = useDispatch();
   const isDrawerShowing = useSelector(isDrawerOpen);
@@ -55,6 +58,7 @@ const AppDrawer = ({
         dispatch(closeDrawer());
       }}
       style={theme.style}
+      position={position}
     >
       {children}
     </DrawerComponent>

@@ -59,7 +59,8 @@ const MainApp = ({
           {engine.ui && config.drawer && (
             <AppDrawer
               theme={parseThemeField(theme.drawer, defaultTheme.drawer)}
-              logo={DrawerLogo && <DrawerLogo />}
+              logo={DrawerLogo}
+              position={config.drawer.position}
             >
               {DrawerContent && <DrawerContent />}
             </AppDrawer>

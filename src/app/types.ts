@@ -1,6 +1,7 @@
 import { RouteProps } from "react-router-dom";
 import { Config } from "@cianciarusocataldo/modular-engine";
 import { CSSProperties } from "react";
+import { DrawerProps } from "@cianciarusocataldo/modular-ui";
 
 export interface CustomizableProperties {
   background?: string;
@@ -57,6 +58,9 @@ export type AppConfig = {
 
     /** App Drawer custom logo, displayed at the top of the Drawer */
     logo: () => JSX.Element;
+
+    /** App Drawer position (relative to the window) */
+    position?: DrawerProps["position"];
   };
 
   /** Custom modals object. Keys are the modals types, values are component to render inside the modal, when opened */
